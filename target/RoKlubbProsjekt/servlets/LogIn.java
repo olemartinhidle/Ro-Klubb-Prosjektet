@@ -3,7 +3,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.https.*;
 
-@WebServlet("/olema/IdeaProjects/RoKlubbProsjekt/src/main/webapp/servlets")
+@WebServlet("/LogIn")
 public class LogIn extends HttpServlet {
 
     private String message;
