@@ -1,3 +1,5 @@
+package servlets;
+
 // Import required java libraries
 import java.io.*;
 import javax.servlet.*;

@@ -4,4 +4,29 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
+
+<servlet>
+  <servlet-name>Login</servlet-name>
+  <servlet-class>servlets.LogIn</servlet-class>
+</servlet>
+  
+  <servlet>
+    <servlet-name>BAconnector</servlet-name>
+    <servlet-class>servlets.brukAvConnector</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/LogIn</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>BAconnector</servlet-name>
+    <url-pattern>/InsertToDatabase</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
