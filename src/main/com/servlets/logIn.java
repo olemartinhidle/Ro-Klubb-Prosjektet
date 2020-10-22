@@ -1,15 +1,16 @@
-package servlets;
+package main.com.servlets;
 
 // Import required java libraries
 import java.io.*;
 import javax.servlet.*;
-import javax.servlet.https.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 @WebServlet("/LogIn")
-public class LogIn extends HttpServlet {
-
-    private String message;
-
+public class logIn extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

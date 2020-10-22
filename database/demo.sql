@@ -2,11 +2,11 @@ create schema RoForbundet;
 
 USE RoForbundet;
 
-create table Felt
+create table Tabell
 (
     MedlemsID int(10) ,
     `String` varchar(20) ,
 
-    constraint Felt_pk
+    constraint Tabell_pk
         primary key (MedlemsID)
 );

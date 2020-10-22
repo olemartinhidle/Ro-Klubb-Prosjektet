@@ -5,16 +5,14 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-
-<!-- Må finne ut hva det fully quallyfied name blir         -->
 <servlet>
   <servlet-name>Login</servlet-name>
-  <servlet-class>servlets.LogIn</servlet-class>
+  <servlet-class>main.com.servlets.logIn</servlet-class>
 </servlet>
   
   <servlet>
     <servlet-name>BAconnector</servlet-name>
-    <servlet-class>servlets.brukAvConnector</servlet-class>
+    <servlet-class>main.com.servlets.insertDB</servlet-class>
   </servlet>
   
   
@@ -27,6 +25,5 @@
     <servlet-name>BAconnector</servlet-name>
     <url-pattern>/InsertToDatabase</url-pattern>
   </servlet-mapping>
-  
-  
+
 </web-app>

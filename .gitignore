@@ -1,0 +1,7 @@
+/target/
+target/RoKlubbProsjekt.war
+target/RoKlubbProsjekt/index.jsp
+target/RoKlubbProsjekt/servlets/brukAvConnector.java
+target/RoKlubbProsjekt/servlets/connector.java
+target/RoKlubbProsjekt/servlets/LogIn.java
+target/RoKlubbProsjekt/WEB-INF/web.xml
