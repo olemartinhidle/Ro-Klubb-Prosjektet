@@ -14,35 +14,45 @@
 
 <body>
 
-<form action="./LogIn" method="get">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.jsp">Home</a></li>
+                <li><a href="results.jsp">Results</a></li>
+                <li><a href="about.jsp">About us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="login-box">
-    <h1>Login</h1>
-    <div class="textbox">
-        <label>
-            <input type="text" placeholder="Your username" name="username" value="">
-        </label>
-    </div>
+        <form action="./LogIn" method="get">
 
-    <div class="textbox">
-        <label>
-            <input type="password" placeholder="Your password" name="password" value="">
-        </label>
-    </div>
+            <div class="login-box">
+             <h1>Login</h1>
+            <div class="textbox">
+              <label>
+                 <input type="text" placeholder="Your username" name="username" value="">
+             </label>
+            </div>
 
-    <input class="btn" type="submit" name="" value="Sign in">
+            <div class="textbox">
+                <label>
+                 <input type="password" placeholder="Your password" name="password" value="">
+                </label>
+             </div>
 
-    <div class="remember-group">
-        <label>
-            <input type="checkbox">
-        </label>
-        <label for="">Remember Me!</label>
-    </div>
+                 <input class="btn" type="submit" name="" value="Sign in">
 
-    <div class="pass">Forgot Password?
-    </div></div>
+             <div class="remember-group">
+                <label>
+                   <input type="checkbox">
+                </label>
+                <label for="">Remember Me!</label>
+             </div>
 
-    </form>
+             <div class="pass">Forgot Password?
+             </div></div>
+
+         </form>
 
 </body>
 
