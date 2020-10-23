@@ -5,27 +5,45 @@
     <title>Roprosjekt</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            background-image: url("https://img.redbull.com/images/q_auto,f_auto/redbullcom/2014/09/22/1331680274837_2/eliminasjonsregatta-p%C3%A5-nord%C3%A5svatnet.jpg");
+            background-size: 100% 100%;
+        }
+    </style>
+
 <body>
+
+<form action="./LogIn" method="get">
 
 <div class="login-box">
     <h1>Login</h1>
     <div class="textbox">
-        <input type="text" placeholder="Username" name="" value="">
+        <label>
+            <input type="text" placeholder="Your username" name="username" value="">
+        </label>
     </div>
 
     <div class="textbox">
-        <input type="password" placeholder="Password" name="" value="">
+        <label>
+            <input type="password" placeholder="Your password" name="password" value="">
+        </label>
     </div>
 
-    <input class="btn" type="button" name="" value="Sign in">
+    <input class="btn" type="submit" name="" value="Sign in">
 
     <div class="remember-group">
-        <input type="checkbox">
+        <label>
+            <input type="checkbox">
+        </label>
         <label for="">Remember Me!</label>
     </div>
 
     <div class="pass">Forgot Password?
     </div></div>
+
+    </form>
+
 </body>
 
 </html>
