@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Roprosjekt</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/indexstyle.css">
 
     <style>
         body {
@@ -17,9 +17,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="home.jsp">Home</a></li>
-                <li><a href="results.jsp">Results</a></li>
-                <li><a href="about.jsp">About us</a></li>
+                <li><a href="pages/home.jsp">Home</a></li>
+                <li><a href="pages/results.jsp">Results</a></li>
+                <li><a href="pages/about.jsp">About us</a></li>
             </ul>
         </nav>
     </header>

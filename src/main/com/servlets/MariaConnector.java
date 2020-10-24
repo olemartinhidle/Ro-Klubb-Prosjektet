@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 // This class can be used to initialize the database connection
-public class connector {
+public class MariaConnector {
     protected static Connection initializeDatabase()
             throws SQLException, ClassNotFoundException
     {
@@ -15,12 +15,13 @@ public class connector {
         String dbDriver = "org.mariadb.jdbc.Driver";
         String dbURL = "jdbc:mariadb://127.0.0.1:3306";
         // Database name to access
-        String dbName = "RoForbundet";
+        String dbName = "@DockerDB";
         String dbUsername = "root";
         String dbPassword = "Ex20200702-IS201";
 
         Class.forName(dbDriver);
-        Connection con = DriverManager.getConnection(dbURL + dbName,
+        Connection con;
+        con = DriverManager.getConnection(dbURL + dbName,
                 dbUsername,
                 dbPassword);
         return con;
