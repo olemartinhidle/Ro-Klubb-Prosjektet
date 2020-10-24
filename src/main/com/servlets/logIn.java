@@ -2,7 +2,6 @@ package main.com.servlets;
 
 // Import required java libraries
 import java.io.*;
-import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/LogIn")
 public class logIn extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    try {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
+
+        try {
 
 
         // Set response content type
