@@ -5,14 +5,19 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-<servlet>
+  <servlet>
   <servlet-name>Login</servlet-name>
   <servlet-class>main.com.servlets.logIn</servlet-class>
-</servlet>
-  
+  </servlet>
+
   <servlet>
-    <servlet-name>BAconnector</servlet-name>
+    <servlet-name>insertDB</servlet-name>
     <servlet-class>main.com.servlets.insertDB</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>View_Table</servlet-name>
+    <servlet-class>main.com.servlets.ReturnFromDB</servlet-class>
   </servlet>
   
   
@@ -22,8 +27,13 @@
   </servlet-mapping>
   
   <servlet-mapping>
-    <servlet-name>BAconnector</servlet-name>
+    <servlet-name>insertDB</servlet-name>
     <url-pattern>/InsertToDatabase</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>View_Table</servlet-name>
+    <url-pattern>/ReturnTable</url-pattern>
   </servlet-mapping>
 
 </web-app>
