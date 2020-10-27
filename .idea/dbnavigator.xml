@@ -45,6 +45,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/database/Atleets.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/database/demo2.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/database/demo.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="RoForbundet" />
   </component>
