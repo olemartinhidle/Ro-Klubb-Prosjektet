@@ -1040,12 +1040,54 @@
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <table id="331" parent="2" name="Tabell"/>
-    <column id="332" parent="331" name="MedlemsID">
+    <table id="331" parent="2" name="Atleets"/>
+    <table id="332" parent="2" name="Tabell"/>
+    <column id="333" parent="331" name="AtleetID">
+      <Position>1</Position>
+      <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="334" parent="331" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="335" parent="331" name="Last_Name">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="336" parent="331" name="PhoneNumber">
+      <Position>4</Position>
+      <DataType>varchar(24)|0s</DataType>
+    </column>
+    <index id="337" parent="331" name="Atleets_Name_uindex">
+      <ColNames>Name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="338" parent="331" name="Atleets_PhoneNumber_uindex">
+      <ColNames>PhoneNumber</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="339" parent="331" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AtleetID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="340" parent="331" name="Atleets_Name_uindex">
+      <ColNames>Name</ColNames>
+      <UnderlyingIndexName>Atleets_Name_uindex</UnderlyingIndexName>
+    </key>
+    <key id="341" parent="331" name="Atleets_PhoneNumber_uindex">
+      <ColNames>PhoneNumber</ColNames>
+      <UnderlyingIndexName>Atleets_PhoneNumber_uindex</UnderlyingIndexName>
+    </key>
+    <column id="342" parent="332" name="MedlemsID">
       <Position>1</Position>
       <DataType>int(20)|0s</DataType>
     </column>
-    <column id="333" parent="331" name="String">
+    <column id="343" parent="332" name="String">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
