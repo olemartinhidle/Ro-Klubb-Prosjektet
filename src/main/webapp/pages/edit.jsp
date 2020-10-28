@@ -26,7 +26,7 @@
     <!-- Create an element with mandatory name attribute,
     so that data can be transfer to the servlet using getParameter() -->
     <label>
-        <input type="number" name="atleetID"/>
+        <input type="number" name="athleteID"/>
     </label>
         <br/>
         <p>Name:</p>
