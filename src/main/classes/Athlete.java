@@ -1,12 +1,12 @@
 package main.classes;
 
-public class Atleets {
-    int atleetID;
+public class Athlete {
+    int athleteID;
     String name;
     String last_name;
     String phoneNumber;
 
-    public void setId(int atleetID) {
+    public void setId(int athlete) {
     }
 
     public void setName(String name) {
@@ -16,5 +16,8 @@ public class Atleets {
     }
 
     public void setNumber(String phoneNumber) {
+    }
+
+    public void add(Athlete athlete) {
     }
 }
