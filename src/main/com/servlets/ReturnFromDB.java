@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,9 +18,10 @@ import java.util.ArrayList;
 @WebServlet("/ReturnTable")
 public class ReturnFromDB extends HttpServlet {
     protected void doGet(HttpServletRequest request,
-                          HttpServletResponse response) {
+                          HttpServletResponse response) throws IOException {
 
-        ArrayList<Athlete> athlete = new ArrayList<>();
+        PrintWriter  writer = response.getWriter();
+        ArrayList<Athlete> athletes = new ArrayList<>();
 
             try (
                     Connection con = main.com.servlets.MariaConnector.initializeDatabase();
@@ -27,20 +29,20 @@ public class ReturnFromDB extends HttpServlet {
                     ResultSet rs = st.executeQuery()
             ) {
                 while (rs.next()) {
-                    Athlete athletes;
-                    athletes = new Athlete();
-                    athletes.setId(rs.getInt("athleteID"));
-                    athletes.setName(rs.getString("name"));
-                    athletes.setLastName(rs.getString("last_name"));
-                    athletes.setNumber(rs.getString("phoneNumber"));
-                    athletes.add(athletes);
+                    Athlete athlete;
+                    athlete = new Athlete();
+                    athlete.setId(rs.getInt("AthleteID"));
+                    athlete.setName(rs.getString("Name"));
+                    athlete.setLastName(rs.getString("Last_Name"));
+                    athlete.setNumber(rs.getString("PhoneNumber"));
+                    athletes.add(athlete);
                 }
-                PrintWriter out = response.getWriter();
-                out.print(athlete);
+
+                for (Athlete athlete : athletes) {
+                    writer.println(athlete);
 
 
-            } catch (SQLException | IOException | ClassNotFoundException throwables) {
-                throwables.printStackTrace();
+                    }} catch (SQLException | ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        }
-    }
+    }}
