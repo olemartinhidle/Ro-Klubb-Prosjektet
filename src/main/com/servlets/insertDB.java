@@ -36,25 +36,25 @@ public class insertDB extends HttpServlet {
             st.executeQuery();
 
                               st = con
-                    .prepareStatement("create table IF NOT EXISTS Atleets\n" +
+                    .prepareStatement("create table IF NOT EXISTS Athlete\n" +
                             "(\n" +
-                            "\tAtleetID int(40) auto_increment,\n" +
+                            "\tAthleteID int(40) auto_increment,\n" +
                             "\tName varchar(30) null,\n" +
                             "\tLast_Name varchar(30) null,\n" +
                             "\tPhoneNumber varchar(30) null,\n" +
-                            "\tconstraint Atleets_pk\n" +
-                            "\t\tprimary key (AtleetID)\n" +
+                            "\tconstraint Athlete_pk\n" +
+                            "\t\tprimary key (AthleteID)\n" +
                             ");");
 
             st.executeQuery();
 
                               st = con
-                    .prepareStatement("INSERT INTO RoForbundet.Atleets values (?, ?, ?, ?)");
+                    .prepareStatement("INSERT INTO RoForbundet.Athlete values (?, ?, ?, ?)");
 
             // For the first parameter,
             // get the data using request object
             // sets the data to st pointer
-            st.setInt(1, Integer.parseInt(request.getParameter("atleetID")));
+            st.setInt(1, Integer.parseInt(request.getParameter("athleteID")));
 
             // Same for second parameter
             st.setString(2, request.getParameter("name"));
