@@ -7,6 +7,7 @@ public class Athlete {
     String Last_Name;
     String PhoneNumber;
 
+
     public void setId(int AthleteID) {
     }
     public int getID() {
@@ -43,7 +44,7 @@ public class Athlete {
 
     public String toString() {
 
-        return AthleteID + Name + Last_Name + PhoneNumber;
+        return String.format("AthleteID %s, Name %s, Last_name %s, Phonenumber %s", AthleteID, Name, Last_Name, PhoneNumber);
 
 }
 }

@@ -38,7 +38,11 @@ public class ReturnFromDB extends HttpServlet {
                 }
 
                 for (Athlete athlete : athletes) {
-                    writer.println(athlete);
+                    int ID = athlete.getID();
+                    String Name = athlete.getName();
+                    String Last_Name = athlete.getLast_Name();
+                    String PhoneNumber = athlete.getNumber();
+                    writer.format("AthleteID %s, Name %s, Last_name %s, Phonenumber %s", ID, Name, Last_Name, PhoneNumber);
 
 
                     }} catch (SQLException | ClassNotFoundException e) {
