@@ -4,9 +4,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 // Import Database Connection Class file
 
@@ -16,7 +18,8 @@ public class insertDB extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response) {
+                          HttpServletResponse response) throws IOException {
+        PrintWriter  writer = response.getWriter();
         try {
 
             // Initialize the database
@@ -25,9 +28,7 @@ public class insertDB extends HttpServlet {
             // Create a SQL query to insert data into demo table
             // demo table consists of two columns, so two '?' is used
 
-            PreparedStatement st = con
-
-                    .prepareStatement("INSERT INTO RoForbundet.Athlete values (?, ?, ?, ?)");
+            PreparedStatement st = con.prepareStatement("INSERT INTO RoForbundet.Athlete values (?, ?, ?, ?)");
 
             // For the first parameter,
             // get the data using request object
@@ -52,7 +53,7 @@ public class insertDB extends HttpServlet {
             // Get a writer pointer
             // to display the successful result
             PrintWriter out = response.getWriter();
-            out.println("<html>" +
+            writer.println("<html>" +
                         "<body>" +
                         "<h1>Successfully Inserted</h1>" +
                         "</body>" +
