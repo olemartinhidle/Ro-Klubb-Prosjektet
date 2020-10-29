@@ -23,11 +23,5 @@ public class MariaConnector {
 
         return DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/?user=root&password=Ex20200702-IS201");
 
-       /** Connection con;
-        con = DriverManager.getConnection(dbURL + dbName,
-                dbUsername,
-                dbPassword);
-        return con;
-        */
     }
 }

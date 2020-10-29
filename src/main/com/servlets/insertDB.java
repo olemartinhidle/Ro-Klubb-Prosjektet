@@ -8,10 +8,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 // Import Database Connection Class file
-import main.com.servlets.MariaConnector;
+
 // Servlet Name
 @WebServlet("/InsertToDatabase")
 public class insertDB extends HttpServlet {
@@ -52,7 +51,7 @@ public class insertDB extends HttpServlet {
             PrintWriter out = response.getWriter();
             writer.println("<html>" +
                         "<body>" +
-                        "<h1>Successfully Inserted</h1>" +
+                        "<h1>Successfully Added Athlete To The Database</h1>" +
                         "</body>" +
                         "</html>");
 
