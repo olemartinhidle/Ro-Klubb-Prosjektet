@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 // Import Database Connection Class file
-
+import main.com.servlets.MariaConnector;
 // Servlet Name
 @WebServlet("/InsertToDatabase")
 public class insertDB extends HttpServlet {
@@ -20,7 +20,7 @@ public class insertDB extends HttpServlet {
         try {
 
             // Initialize the database
-            Connection con = main.com.servlets.MariaConnector.initializeDatabase();
+            Connection con = MariaConnector.initializeDatabase();
 
             // Create a SQL query to insert data into demo table
             // demo table consists of two columns, so two '?' is used
@@ -45,9 +45,6 @@ public class insertDB extends HttpServlet {
             // to make changes in database
             st.executeUpdate();
 
-            // Close all the connections
-            st.close();
-            con.close();
 
             // Get a writer pointer
             // to display the successful result
@@ -57,6 +54,11 @@ public class insertDB extends HttpServlet {
                         "<h1>Successfully Inserted</h1>" +
                         "</body>" +
                         "</html>");
+
+            // Close all the connections
+            st.close();
+            con.close();
+
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -10,12 +10,14 @@ public class Athlete {
     public void setId(int AthleteID) {
     }
     public int getID() {
+
         return AthleteID;
     }
     public void setName(String Name) {
     }
 
     public String getName() {
+
         return Name;
     }
 
@@ -24,14 +26,16 @@ public class Athlete {
     }
 
         public String getLast_Name() {
-            return Last_Name;
+
+        return Last_Name;
         }
 
-    public void setNumber(String phoneNumber) {
+    public void setNumber(String PhoneNumber) {
     }
 
         public String getNumber() {
-            return PhoneNumber;
+
+        return PhoneNumber;
         }
 
     public void add(Athlete athlete) {
