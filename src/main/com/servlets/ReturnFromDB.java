@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.Atleets;
+import main.classes.Athlete;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,29 +17,31 @@ import java.util.ArrayList;
 @WebServlet("/ReturnTable")
 public class ReturnFromDB extends HttpServlet {
     protected void doGet(HttpServletRequest request,
-                          HttpServletResponse response) {
+                          HttpServletResponse response) throws IOException {
 
-        ArrayList<Atleets> atleets = new ArrayList<>();
+        PrintWriter  writer = response.getWriter();
+        ArrayList<Athlete> athletes = new ArrayList<>();
 
             try (
                     Connection con = main.com.servlets.MariaConnector.initializeDatabase();
-                    PreparedStatement st = con.prepareStatement("SELECT AtleetID, Name, Last_Name, PhoneNumber FROM RoForbundet.Atleets");
+                    PreparedStatement st = con.prepareStatement("SELECT AthleteID, Name, Last_Name, PhoneNumber FROM RoForbundet.Athlete");
                     ResultSet rs = st.executeQuery()
             ) {
                 while (rs.next()) {
-                    Atleets atleet = new Atleets();
-                    atleet.setId(rs.getInt("atleetID"));
-                    atleet.setName(rs.getString("name"));
-                    atleet.setLastName(rs.getString("last_name"));
-                    atleet.setNumber(rs.getString("phoneNumber"));
-                    atleets.add(atleet);
+                    Athlete athlete;
+                    athlete = new Athlete();
+                    athlete.setId(rs.getInt("AthleteID"));
+                    athlete.setName(rs.getString("Name"));
+                    athlete.setLastName(rs.getString("Last_Name"));
+                    athlete.setNumber(rs.getString("PhoneNumber"));
+                    athletes.add(athlete);
                 }
-                PrintWriter out = response.getWriter();
-                out.print(atleets);
+
+                for (Athlete athlete : athletes) {
+                    writer.println(athlete);
 
 
-            } catch (SQLException | IOException | ClassNotFoundException throwables) {
-                throwables.printStackTrace();
+                    }} catch (SQLException | ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        }
-    }
+    }}

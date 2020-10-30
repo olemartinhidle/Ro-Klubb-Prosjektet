@@ -13,17 +13,15 @@ public class MariaConnector {
         // Initialize all the information regarding
         // Database Connection
         String dbDriver = "org.mariadb.jdbc.Driver";
-        String dbURL = "jdbc:mariadb://127.0.0.1:3306";
+        String dbURL = "jdbc:mariadb://127.0.0.1:3306/RoForbundet";
         // Database name to access
         String dbName = "@DockerDB";
         String dbUsername = "root";
         String dbPassword = "Ex20200702-IS201";
 
         Class.forName(dbDriver);
-        Connection con;
-        con = DriverManager.getConnection(dbURL + dbName,
-                dbUsername,
-                dbPassword);
-        return con;
+
+        return DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/?user=root&password=Ex20200702-IS201");
+
     }
 }

@@ -19,29 +19,29 @@
     </nav>
 </header>
 
-<h1>Edit Atleet Data</h1>
+<h1>Edit Athlete Data</h1>
 
 <form action=".././InsertToDatabase" method="post">
-    <p>AtleetID:</p>
+    <p>AthleteID:</p>
     <!-- Create an element with mandatory name attribute,
     so that data can be transfer to the servlet using getParameter() -->
     <label>
-        <input type="number" name="atleetID"/>
+        <input type="number" name="AthleteID"/>
     </label>
         <br/>
         <p>Name:</p>
     <label>
-        <input type="text" name="name"/>
+        <input type="text" name="Name"/>
     </label>
     <label>
         <br/>
         <p>Last Name</p>
-        <input type="text" name="last_name"/>
+        <input type="text" name="Last_Name"/>
     </label>
         <br/>
         <p>Phone Number:</p>
     <label>
-        <input type="text" name="phoneNumber"/>
+        <input type="text" name="PhoneNumber"/>
     </label>
 
     <br/><br/><br/>

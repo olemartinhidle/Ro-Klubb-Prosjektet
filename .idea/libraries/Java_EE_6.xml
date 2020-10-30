@@ -10,6 +10,7 @@
       <root url="jar://$PROJECT_DIR$/src/main/lib/javax.servlet.jsp.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/main/lib/javax.servlet.jsp.jstl.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/main/lib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/lib/mariadb-java-client-2.6.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

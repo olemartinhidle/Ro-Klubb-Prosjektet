@@ -22,7 +22,7 @@
 
     <form action=".././ReturnTable" method="get">
             </br></br></br>
-            <button style="animation-play-state: running" type="submit">Show Atleets</button>
+            <button style="animation-play-state: running" type="submit">Show Athlete</button>
 
     </form>
 
