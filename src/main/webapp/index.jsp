@@ -1,62 +1,30 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Roprosjekt</title>
-    <link rel="stylesheet" href="styles/indexstyle.css">
-
-    <style>
-        body {
-            background-image: url("https://img.redbull.com/images/q_auto,f_auto/redbullcom/2014/09/22/1331680274837_2/eliminasjonsregatta-p%C3%A5-nord%C3%A5svatnet.jpg");
-            background-size: 100% 100%;
-        }
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Roprosjekt</title>
+        <link rel="stylesheet" href="styles/indexstyle.css">
+</head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="pages/home.jsp">Home</a></li>
-                <li><a href="pages/results.jsp">Results</a></li>
-                <li><a href="pages/about.jsp">About us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-        <form action="./LogIn" method="get">
-
-            <div class="login-box">
-             <h1>Login</h1>
-            <div class="textbox">
-              <label>
-                 <input type="text" placeholder="Your username" name="username" value="">
-             </label>
-            </div>
-
-            <div class="textbox">
-                <label>
-                 <input type="password" placeholder="Your password" name="password" value="">
-                </label>
-             </div>
-
-                 <input class="btn" type="submit" name="" value="Sign in">
-
-             <div class="remember-group">
-                <label>
-                   <input type="checkbox">
-                </label>
-                <label for="">Remember Me!</label>
-             </div>
-
-             <div class="pass">Forgot Password?
-             </div></div>
-
-         </form>
-
-</body>
-
+    <div class="title"><h1>Logg inn her</h1></div>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <div class="formBox">
+                <form>
+                    <p>Brukernavn</p>
+                    <input type="text" name="" placeholder="Epost">
+                    <p>Passord</p>
+                    <input type="Passord" name="" placeholder="......">
+                    <input type="submit" name="" value="Logg inn">
+                    <a href="#">Glemt passord</a>
+                </form>
+        </div>
+    </body>
 </html>
+
 <!-- <h1>  Welcome!!  </h1>
 
 <h2>        Hello Rowing Enthusiasts! <3  </h2>
@@ -83,6 +51,45 @@ so that data can be transfer to the servlet using getParameter() -->
     </label>
     <br/><br/><br/>
     <button style="animation-play-state: running" type="submit">Add</button>
+</form>
+
+egentlig kode:
+<style>
+body {
+background-image: url("https://www.linkpicture.com/q/roing_1.jpg");
+background-repeat: no-repeat;
+background-size: 97% 95%;
+background-position: center;
+}
+</style>
+
+<body>
+<form action="./LogIn" method="get">
+
+<div class="login-box">
+<h1>Logg inn</h1>
+
+<div class="textbox">
+<label>
+<input type="text" placeholder="Brukernavn" name="brukernavn" value="">
+</label>
+</div>
+
+<div class="textbox">
+<label>
+<input type="passord" placeholder="Passord" name="passord" value="">
+</label>
+</div>
+
+<input class="btn" type="submit" name="" value="Logg inn">
+
+<div class="remember-group">
+<label>
+<input type="checkbox">
+</label>
+<label for="Husk meg"></label>
+</div>
+
 </form>
 
 -->
