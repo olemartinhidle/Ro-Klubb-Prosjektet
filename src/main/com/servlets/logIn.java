@@ -20,9 +20,9 @@ public class logIn extends HttpServlet {
         response.setContentType("text/html");
         // Actual logic goes here.
         PrintWriter out = response.getWriter();
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        out.println("Your username is: ");
+        String username = request.getParameter("epost");
+        String password = request.getParameter("passord");
+        out.println("Your E-Mail is: ");
         out.println(username);
         out.println("Your password is: ");
         out.println(password);
