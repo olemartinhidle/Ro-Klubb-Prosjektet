@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -27,7 +27,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94">
-      <console name="MariaDB" type="STANDARD" schema="RoForbundet" session="Main"><![CDATA[create schema RoForbundet;]]></console>
+      <console name="MariaDB" type="STANDARD" schema="RoForbundet" session="Main">create schema RoForbundet;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -46,8 +46,8 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/database/demo2.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="information_schema" />
-    <mapping file-url="file://$PROJECT_DIR$/database/demo.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="RoForbundet" />
     <mapping file-url="file://$PROJECT_DIR$/database/Athlete.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="RoForbundet" />
+    <mapping file-url="file://$PROJECT_DIR$/database/demo.sql" connection-id="22cc3ae5-6bcb-4112-a7a3-3492aa499a94" session-id="MAIN" current-schema="RoForbundet" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -79,7 +79,7 @@
           <config-type value="CUSTOM" />
           <database-version value="10.5" />
           <driver-source value="EXTERNAL" />
-          <driver-library value="C:\Users\olema\IdeaProjects\RoKlubbProsjektet\src\main\lib\mariadb-java-client-2.6.2.jar" />
+          <driver-library value="$PROJECT_DIR$/C:/Users/olema/IdeaProjects/RoKlubbProsjektet/src/main/lib/mariadb-java-client-2.6.2.jar" />
           <driver value="org.mariadb.jdbc.Driver" />
           <url value="jdbc:mariadb://127.0.0.1:3306" />
           <type value="USER_PASSWORD" />
