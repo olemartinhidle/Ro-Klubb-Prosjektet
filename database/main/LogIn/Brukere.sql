@@ -1,9 +1,3 @@
-create table Tilganger
-(
-    Type varchar(10) not null
-        primary key
-);
-
 create table Brukere
 (
     BrukerID    int(32) auto_increment,
@@ -22,3 +16,4 @@ create table Brukere
 
 alter table Brukere
     add primary key (BrukerID);
+

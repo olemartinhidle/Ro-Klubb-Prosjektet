@@ -7,12 +7,12 @@
 
   <servlet>
   <servlet-name>Login</servlet-name>
-  <servlet-class>main.com.servlets.logIn</servlet-class>
+  <servlet-class>main.com.servlets.LogIn</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>insertDB</servlet-name>
-    <servlet-class>main.com.servlets.insertDB</servlet-class>
+    <servlet-class>main.com.servlets.InsertDB</servlet-class>
   </servlet>
 
   <servlet>

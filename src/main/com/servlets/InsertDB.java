@@ -13,7 +13,7 @@ import java.sql.PreparedStatement;
 
 // Servlet Name
 @WebServlet("/InsertToDatabase")
-public class insertDB extends HttpServlet {
+public class InsertDB extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request,
