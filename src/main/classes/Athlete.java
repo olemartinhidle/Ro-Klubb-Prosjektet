@@ -1,6 +1,8 @@
 package main.classes;
 
 
+import main.com.servlets.MariaConnector;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -65,7 +67,7 @@ public class Athlete {
     public ArrayList<Athlete> getUsers() {
         ArrayList<Athlete> athletes = new ArrayList<>();
         try (
-                Connection con = main.com.servlets.MariaConnector.initializeDatabase();
+                Connection con = MariaConnector.initializeDatabase();
                 PreparedStatement st = con.prepareStatement("SELECT AthleteID, Name, Last_Name, PhoneNumber FROM RoForbundet.Athlete");
                 ResultSet rs = st.executeQuery()
         ) {

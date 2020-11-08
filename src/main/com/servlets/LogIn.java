@@ -1,7 +1,9 @@
 package main.com.servlets;
 
-// Import required java libraries
+import main.classes.login.Users;
+
 import java.io.*;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,29 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/LogIn")
 public class LogIn extends HttpServlet {
+    private static  final  long serialVersionUID = 1L;
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) {
-
-        try {
-
-
-        // Set response content type
+    public void doPost(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("text/html");
-        // Actual logic goes here.
-        PrintWriter out = response.getWriter();
-        String username = request.getParameter("epost");
-        String password = request.getParameter("passord");
-        out.println("Your E-Mail is: ");
-        out.println(username);
-        out.println("Your password is: ");
-        out.println(password);
+        try {
+            PrintWriter out = response.getWriter();
 
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-    }
+            String epost, passord, msg;
+            //Henter ut brukernavn og passord
+            epost = request.getParameter("Epost");
+            passord = request.getParameter("Passord");
+            msg = Users.AuthenticateMember(epost, passord);
+            if (msg.equals("Korrekt")) {
+            request.getRequestDispatcher("pages/home.jsp").forward(request, response);
+        }   else {
+                response.sendRedirect("pages/error.jsp");
 
-    public void destroy() {
-        // do nothing.
-    }
+            }
+        } catch (IOException | ServletException e) {
+            e.printStackTrace();
+        }}
 }

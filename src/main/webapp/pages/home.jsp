@@ -5,12 +5,7 @@
         <meta charset="UTF-8">
         <title>Roprosjekt</title>
         <link rel="stylesheet" href="../styles/homestyle.css">
-
-
-
     </head>
-    <body>
-
     <header>
         <nav>
             <ul>
@@ -21,10 +16,9 @@
             </ul>
         </nav>
     </header>
-
-
-        <h1>Home page</h1>
-
-
+    <body>
+        <center><h1>Home page</h1></center>
+    <br/><br/>
+        <center> Velkommen medlem  </center>
     </body>
 </html>
