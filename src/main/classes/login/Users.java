@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Users {
+    String Rettigheter;
     String Epost;
     String Passord;
 
@@ -19,6 +20,8 @@ public class Users {
         this.Passord = passord;
     }
 
+    public void setRettigheter(String rettigheter) { Rettigheter = rettigheter;}
+
     public static String AuthenticateMember(String Epost, String Passord) {
         String msg = "";
         String query;
@@ -29,23 +32,12 @@ public class Users {
             ResultSet rs = st.executeQuery();
             if(rs.next()) {
                 if(rs.getString(1).equals(Passord))   {
-
                     msg = "Korrekt";
-
-                }   else    {
-
-                    msg = "Feil, prøv igjen";
-
                 }
-
-
-
-            } else {
-
-                msg = "Feil, prøv igjen";
-
-            }
-
+                else    {
+                    msg = "Feil, prøv igjen"; }}
+                else    {
+                    msg = "Feil, prøv igjen";}
 
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println(e.getMessage());

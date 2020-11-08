@@ -1347,21 +1347,25 @@
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="403" parent="337" name="Brukere_Epost_uindex">
+    <column id="403" parent="337" name="Rettigheter">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <index id="404" parent="337" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="404" parent="337" name="Brukere_Passord_uindex">
+    <index id="405" parent="337" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="405" parent="337" name="Brukere_Epost_uindex">
+    <key id="406" parent="337" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <UnderlyingIndexName>Brukere_Epost_uindex</UnderlyingIndexName>
     </key>
-    <key id="406" parent="337" name="Brukere_Passord_uindex">
+    <key id="407" parent="337" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <UnderlyingIndexName>Brukere_Passord_uindex</UnderlyingIndexName>
     </key>

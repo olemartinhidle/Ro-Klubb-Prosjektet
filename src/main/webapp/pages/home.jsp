@@ -6,6 +6,11 @@
         <title>Roprosjekt</title>
         <link rel="stylesheet" href="../styles/homestyle.css">
     </head>
+<%
+    if(session.getAttribute("Epost")==null)
+        response.sendRedirect("/index.jsp");
+
+%>
     <header>
         <nav>
             <ul>
@@ -16,9 +21,10 @@
             </ul>
         </nav>
     </header>
+
     <body>
         <center><h1>Home page</h1></center>
     <br/><br/>
-        <center> Velkommen medlem  </center>
+        <center> Velkommen : <%=session.getAttribute("Epost")%>  </center>
     </body>
 </html>
