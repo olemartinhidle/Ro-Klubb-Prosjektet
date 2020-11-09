@@ -11,8 +11,8 @@
   </servlet>
 
   <servlet>
-    <servlet-name>insertDB</servlet-name>
-    <servlet-class>main.com.servlets.InsertDB</servlet-class>
+    <servlet-name>nyBruker</servlet-name>
+    <servlet-class>main.com.servlets.NyBrukerServlet</servlet-class>
   </servlet>
 
   <servlet>
@@ -27,8 +27,8 @@
   </servlet-mapping>
   
   <servlet-mapping>
-    <servlet-name>insertDB</servlet-name>
-    <url-pattern>/InsertToDatabase</url-pattern>
+    <servlet-name>nyBruker</servlet-name>
+    <url-pattern>/nyBruker</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

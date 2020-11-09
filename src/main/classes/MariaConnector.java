@@ -1,4 +1,4 @@
-package main.com.servlets;
+package main.classes;
 
 
 import java.sql.Connection;
@@ -7,9 +7,12 @@ import java.sql.SQLException;
 
 // This class can be used to initialize the database connection
 public class MariaConnector {
+    private static Connection con;
+
     public static Connection initializeDatabase()
             throws SQLException, ClassNotFoundException
     {
+
         // Initialize all the information regarding
         // Database Connection
         String dbDriver = "org.mariadb.jdbc.Driver";
@@ -19,9 +22,15 @@ public class MariaConnector {
         String dbUsername = "root";
         String dbPassword = "Ex20200702-IS201";
 
-        Class.forName(dbDriver);
+        try {
+            Class.forName(dbDriver);
 
-        return DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/?user=root&password=Ex20200702-IS201");
+            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/RoForbundet?user=root&password=Ex20200702-IS201");
 
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return con;
     }
 }

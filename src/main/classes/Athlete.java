@@ -1,8 +1,6 @@
 package main.classes;
 
 
-import main.com.servlets.MariaConnector;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

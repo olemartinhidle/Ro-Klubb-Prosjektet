@@ -1337,35 +1337,46 @@
       <RefTableName>Medlemmer</RefTableName>
       <RefColNames>Medlems_Navn</RefColNames>
     </foreign-key>
-    <column id="401" parent="337" name="Epost">
+    <column id="401" parent="337" name="BrukerID">
       <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="402" parent="337" name="Epost">
+      <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="402" parent="337" name="Passord">
-      <Position>2</Position>
+    <column id="403" parent="337" name="Passord">
+      <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="403" parent="337" name="Rettigheter">
-      <Position>3</Position>
+    <column id="404" parent="337" name="Rettigheter">
+      <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
     </column>
-    <index id="404" parent="337" name="Brukere_Epost_uindex">
+    <index id="405" parent="337" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="405" parent="337" name="Brukere_Passord_uindex">
+    <index id="406" parent="337" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="406" parent="337" name="Brukere_Epost_uindex">
+    <key id="407" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BrukerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="408" parent="337" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <UnderlyingIndexName>Brukere_Epost_uindex</UnderlyingIndexName>
     </key>
-    <key id="407" parent="337" name="Brukere_Passord_uindex">
+    <key id="409" parent="337" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <UnderlyingIndexName>Brukere_Passord_uindex</UnderlyingIndexName>
     </key>

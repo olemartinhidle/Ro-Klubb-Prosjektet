@@ -1,6 +1,6 @@
 package main.classes.login;
 
-import main.com.servlets.MariaConnector;
+import main.classes.MariaConnector;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

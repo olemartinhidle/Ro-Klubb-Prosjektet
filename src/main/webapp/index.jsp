@@ -10,6 +10,7 @@
                 <li><a href="pages/results.jsp">Results</a></li>
                 <li><a href="pages/about.jsp">About us</a></li>
                 <li><a href="pages/edit.jsp">Edit</a></li>
+                <li><a href="pages/registrerMedlem.jsp">Registrer bruker</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +29,6 @@
                     <input type="Password" name="Passord" placeholder="Skriv ditt passord">
                     <input type="submit" name="" value="Logg inn">
                     <a href="#">Glemt passord</a>
-                    <ul><li><a href="pages/registrerMedlem.jsp">Registrer medlem</a></li></ul>
                 </form>
         </div>
         </div>
