@@ -24,9 +24,9 @@
             <div class="formBox">
                 <form action="./LogIn" method="post">
                     <p>Brukernavn</p>
-                    <input type="text" name="Epost" placeholder="Skriv din E-post">
+                    <input type="text" name="epost" placeholder="Skriv din E-post">
                     <p>Passord</p>
-                    <input type="Password" name="Passord" placeholder="Skriv ditt passord">
+                    <input type="Password" name="passord" placeholder="Skriv ditt passord">
                     <input type="submit" name="" value="Logg inn">
                     <a href="#">Glemt passord</a>
                 </form>

@@ -2,6 +2,7 @@ package main.classes.login;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class BrukerDB {
     Connection con ;
@@ -29,4 +30,31 @@ public class BrukerDB {
         }
         return bool;
     }
+
+    //user login
+    public Bruker logBruker(String epost, String passord){
+        Bruker bruker=null;
+        try{
+            String query ="SELECT * FROM Brukere WHERE Epost=? AND Passord=?";
+            PreparedStatement pt = this.con.prepareStatement(query);
+            pt.setString(1, epost);
+            pt.setString(2, passord);
+
+            ResultSet rs = pt.executeQuery();
+
+            if(rs.next()){
+                bruker = new Bruker();
+                bruker.setId(rs.getInt("BrukerID"));
+                bruker.setEpost(rs.getString("Epost"));
+                bruker.setPassord(rs.getString("Passord"));
+                bruker.setRettigheter(rs.getString("Rettigheter"));
+
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return bruker;
+    }
+
 }

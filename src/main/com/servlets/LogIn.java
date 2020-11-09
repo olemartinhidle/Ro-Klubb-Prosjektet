@@ -1,8 +1,12 @@
 package main.com.servlets;
 
+import main.classes.MariaConnector;
+import main.classes.login.Bruker;
+import main.classes.login.BrukerDB;
 import main.classes.login.Users;
 
 import java.io.*;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,25 +17,32 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/LogIn")
 public class LogIn extends HttpServlet {
-    private static  final  long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) {
-            response.setContentType("text/html");
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
+
+        //feth data from login form
+
+        String logepost = req.getParameter("epost");
+        String logpassord = req.getParameter("passord");
+
+        BrukerDB bdb = null;
         try {
-            PrintWriter out = response.getWriter();
-            HttpSession session = request.getSession();
-            String epost, passord, msg;
-            //Henter ut brukernavn og passord
-            epost = request.getParameter("Epost");
-            passord = request.getParameter("Passord");
-            msg = Users.AuthenticateMember(epost, passord);
-            if (msg.equals("Korrekt")) {
-                session.setAttribute("Epost", epost);
-                request.getRequestDispatcher("pages/home.jsp").forward(request, response);
-        }
-                else {
+            bdb = new BrukerDB(MariaConnector.initializeDatabase());
+
+            Bruker bruker = bdb.logBruker(logepost, logpassord);
+
+            if (bruker != null) {
+                HttpSession session = req.getSession();
+                session.setAttribute("logUser", bruker);
+                res.sendRedirect("pages/home.jsp");
+            } else {
+                out.println("user not found");
             }
-        } catch (IOException | ServletException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-        }}
+        }
+    }
 }
