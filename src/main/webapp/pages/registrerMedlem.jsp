@@ -15,20 +15,19 @@
     </nav>
 </header>
 <body>
-
-
-<div class="title"><h1>Logg inn her</h1></div>
+<div class="title"><h1>Registrer ny bruker</h1></div>
 <div class="container">
     <div class="left"></div>
     <div class="right">
         <div class="formBox">
-            <form action="./LogIn" method="get">
-                <p>Lag ditt brukernavn</p>
+            <form action=".././nyBruker" method="post">
+                <p>Register din Epost</p>
                 <input type="text" name="epost" placeholder="Din E-post">
                 <p>Lag et passord</p>
                 <input type="Password" name="passord" placeholder="Passord">
-                <input type="submit" name="" value="Register medlem">
-
+                <p>Bestem rettigheter</p>
+                <input type="text" name="rettigheter" placeholder="Medlem, Moderator eller Admin">
+                <input type="submit" name="" value="Register bruker">
             </form>
         </div>
     </div>

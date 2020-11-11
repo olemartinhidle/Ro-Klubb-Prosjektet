@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/database/main/DBtester/Athlete.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/database/main/DBtester/OpprettDB.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/database/main/DBtester/demo.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/main_sql/DB_Tester/Athlete.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/database/main_sql/DB_Tester/OpprettDB.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/main_sql/DB_Tester/demo.sql" dialect="GenericSQL" />
   </component>
   <component name="SqlResolveMappings">
     <file url="file://$PROJECT_DIR$/src/main/com/servlets/InsertDB.java" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;@negative&quot;:&quot;1&quot;   }  } }}" />

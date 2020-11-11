@@ -11,13 +11,18 @@
   </servlet>
 
   <servlet>
-    <servlet-name>insertDB</servlet-name>
-    <servlet-class>main.com.servlets.InsertDB</servlet-class>
+    <servlet-name>nyBruker</servlet-name>
+    <servlet-class>main.com.servlets.NyBrukerServlet</servlet-class>
   </servlet>
-
+<!--
   <servlet>
     <servlet-name>View_Table</servlet-name>
     <servlet-class>main.com.servlets.ReturnFromDB</servlet-class>
+  </servlet>
+  -->
+  <servlet>
+    <servlet-name>LogUt</servlet-name>
+    <servlet-class>main.com.servlets.LogUt</servlet-class>
   </servlet>
   
   
@@ -27,13 +32,18 @@
   </servlet-mapping>
   
   <servlet-mapping>
-    <servlet-name>insertDB</servlet-name>
-    <url-pattern>/InsertToDatabase</url-pattern>
+    <servlet-name>nyBruker</servlet-name>
+    <url-pattern>/nyBruker</url-pattern>
   </servlet-mapping>
-
+<!--
   <servlet-mapping>
     <servlet-name>View_Table</servlet-name>
     <url-pattern>/ReturnTable</url-pattern>
+  </servlet-mapping>
+  -->
+  <servlet-mapping>
+    <servlet-name>LogUt</servlet-name>
+    <url-pattern>/LogUt</url-pattern>
   </servlet-mapping>
 
 </web-app>
