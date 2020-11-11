@@ -1,19 +1,12 @@
 create table Brukere
 (
-    BrukerID    int(32) auto_increment,
+    BrukerID    int auto_increment
+        primary key,
     Epost       varchar(32) not null,
     Passord     varchar(20) not null,
-    Rettigheter varchar(10) not null,
-    constraint Brukere_BrukerID_uindex
-        unique (BrukerID),
+    Rettigheter varchar(10) null,
     constraint Brukere_Epost_uindex
         unique (Epost),
     constraint Brukere_Passord_uindex
-        unique (Passord),
-    constraint Brukere_Tilganger_Type_fk
-        foreign key (Rettigheter) references Tilganger (Type)
+        unique (Passord)
 );
-
-alter table Brukere
-    add primary key (BrukerID);
-

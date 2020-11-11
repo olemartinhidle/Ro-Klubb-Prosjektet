@@ -1,3 +1,4 @@
+/**
 package main.com.servlets;
 
 import main.classes.Athlete;
@@ -28,3 +29,4 @@ public class ReturnFromDB extends HttpServlet {
         }
     }
 }
+ */
