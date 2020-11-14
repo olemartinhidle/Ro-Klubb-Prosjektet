@@ -1250,204 +1250,219 @@
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="381" parent="337" name="Medlemmer_Klasser_KlasseID_fk">
+    <column id="381" parent="337" name="Stilling">
+      <Position>7</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="382" parent="337" name="Klubb">
+      <Position>8</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="383" parent="337" name="Klasse">
+      <Position>9</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="384" parent="337" name="Medlemmer_Klasser_KlasseID_fk">
       <ColNames>KlasseID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="382" parent="337" name="Medlemmer_Klubber_KlubbID_fk">
+    <index id="385" parent="337" name="Medlemmer_Klubber_KlubbID_fk">
       <ColNames>KlubbID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="383" parent="337" name="PRIMARY">
+    <key id="386" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MedlemsID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="384" parent="337" name="Medlemmer_Klasser_KlasseID_fk">
+    <foreign-key id="387" parent="337" name="Medlemmer_Klasser_KlasseID_fk">
       <ColNames>KlasseID</ColNames>
       <RefTableName>Klasser</RefTableName>
       <RefColNames>KlasseID</RefColNames>
     </foreign-key>
-    <foreign-key id="385" parent="337" name="Medlemmer_Klubber_KlubbID_fk">
+    <foreign-key id="388" parent="337" name="Medlemmer_Klubber_KlubbID_fk">
       <ColNames>KlubbID</ColNames>
       <RefTableName>Klubber</RefTableName>
       <RefColNames>KlubbID</RefColNames>
     </foreign-key>
-    <column id="386" parent="338" name="Stillings_ID">
+    <column id="389" parent="338" name="Stillings_ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="387" parent="338" name="Stillings_Type">
+    <column id="390" parent="338" name="Stillings_Type">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="388" parent="338" name="PRIMARY">
+    <key id="391" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Stillings_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="389" parent="338" name="Stillinger_Medlemmer_MedlemsID_fk">
+    <foreign-key id="392" parent="338" name="Stillinger_Medlemmer_MedlemsID_fk">
       <ColNames>Stillings_ID</ColNames>
       <RefTableName>Medlemmer</RefTableName>
       <RefColNames>MedlemsID</RefColNames>
     </foreign-key>
-    <column id="390" parent="339" name="TestID">
+    <column id="393" parent="339" name="TestID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="391" parent="339" name="MedlemsID">
+    <column id="394" parent="339" name="MedlemsID">
       <Position>2</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="392" parent="339" name="Ligg_Ro_Prosent">
+    <column id="395" parent="339" name="Ligg_Ro_Prosent">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="393" parent="339" name="Ligg_Ro_KG">
+    <column id="396" parent="339" name="Ligg_Ro_KG">
       <Position>4</Position>
       <DataType>int(20)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="394" parent="339" name="Knebøy_Prosent">
+    <column id="397" parent="339" name="Knebøy_Prosent">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="395" parent="339" name="Knebøy_KG">
+    <column id="398" parent="339" name="Knebøy_KG">
       <Position>6</Position>
       <DataType>int(20)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="396" parent="339" name="Antall_Beveg">
+    <column id="399" parent="339" name="Antall_Beveg">
       <Position>7</Position>
       <DataType>int(20)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="397" parent="339" name="StyrkeTester_Medlemmer_MedlemsID_fk">
+    <index id="400" parent="339" name="StyrkeTester_Medlemmer_MedlemsID_fk">
       <ColNames>MedlemsID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="398" parent="339" name="PRIMARY">
+    <key id="401" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TestID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="399" parent="339" name="StyrkeTester_Tester_TestID_fk">
+    <foreign-key id="402" parent="339" name="StyrkeTester_Tester_TestID_fk">
       <ColNames>TestID</ColNames>
       <RefTableName>Dato_Tester</RefTableName>
       <RefColNames>TestID</RefColNames>
     </foreign-key>
-    <foreign-key id="400" parent="339" name="StyrkeTester_Medlemmer_MedlemsID_fk">
+    <foreign-key id="403" parent="339" name="StyrkeTester_Medlemmer_MedlemsID_fk">
       <ColNames>MedlemsID</ColNames>
       <RefTableName>Medlemmer</RefTableName>
       <RefColNames>MedlemsID</RefColNames>
     </foreign-key>
-    <column id="401" parent="340" name="TestID">
+    <column id="404" parent="340" name="TestID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="402" parent="340" name="MedlemsID">
+    <column id="405" parent="340" name="MedlemsID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="403" parent="340" name="5000M_Watt">
+    <column id="406" parent="340" name="5000M_Watt">
       <Position>3</Position>
       <DataType>int(30)|0s</DataType>
     </column>
-    <column id="404" parent="340" name="5000M_Tid">
+    <column id="407" parent="340" name="5000M_Tid">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="405" parent="340" name="2000M_Watt">
+    <column id="408" parent="340" name="2000M_Watt">
       <Position>5</Position>
       <DataType>int(30)|0s</DataType>
     </column>
-    <column id="406" parent="340" name="2000M_Tid">
+    <column id="409" parent="340" name="2000M_Tid">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="407" parent="340" name="60M_Watt">
+    <column id="410" parent="340" name="60M_Watt">
       <Position>7</Position>
       <DataType>int(30)|0s</DataType>
     </column>
-    <column id="408" parent="341" name="TestID">
+    <column id="411" parent="341" name="TestID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="409" parent="341" name="MedlemsID">
+    <column id="412" parent="341" name="MedlemsID">
       <Position>2</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="410" parent="341" name="Ligg_Ro_Prosent">
+    <column id="413" parent="341" name="Ligg_Ro_Prosent">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="411" parent="341" name="Ligg_Ro_KG">
+    <column id="414" parent="341" name="Ligg_Ro_KG">
       <Position>4</Position>
       <DataType>int(20)|0s</DataType>
     </column>
-    <column id="412" parent="341" name="Knebøy_Prosent">
+    <column id="415" parent="341" name="Knebøy_Prosent">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="413" parent="341" name="Knebøy_KG">
+    <column id="416" parent="341" name="Knebøy_KG">
       <Position>6</Position>
       <DataType>int(20)|0s</DataType>
     </column>
-    <column id="414" parent="341" name="Antall_Beveg">
+    <column id="417" parent="341" name="Antall_Beveg">
       <Position>7</Position>
       <DataType>int(20)|0s</DataType>
     </column>
-    <column id="415" parent="342" name="BrukerID">
+    <column id="418" parent="342" name="BrukerID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="416" parent="342" name="Epost">
+    <column id="419" parent="342" name="Epost">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="417" parent="342" name="Passord">
+    <column id="420" parent="342" name="Passord">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="418" parent="342" name="Rettigheter">
+    <column id="421" parent="342" name="Rettigheter">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
     </column>
-    <index id="419" parent="342" name="Brukere_Epost_uindex">
+    <index id="422" parent="342" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="420" parent="342" name="Brukere_Passord_uindex">
+    <index id="423" parent="342" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="421" parent="342" name="PRIMARY">
+    <key id="424" parent="342" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>BrukerID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="422" parent="342" name="Brukere_Epost_uindex">
+    <key id="425" parent="342" name="Brukere_Epost_uindex">
       <ColNames>Epost</ColNames>
       <UnderlyingIndexName>Brukere_Epost_uindex</UnderlyingIndexName>
     </key>
-    <key id="423" parent="342" name="Brukere_Passord_uindex">
+    <key id="426" parent="342" name="Brukere_Passord_uindex">
       <ColNames>Passord</ColNames>
       <UnderlyingIndexName>Brukere_Passord_uindex</UnderlyingIndexName>
     </key>
