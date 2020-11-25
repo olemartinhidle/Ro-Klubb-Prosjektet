@@ -1,4 +1,4 @@
-create table RoForbundDB.Forbund
+create table Forbund
 (
     ForbundsID    int auto_increment
         primary key,

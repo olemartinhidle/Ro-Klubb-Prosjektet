@@ -29,7 +29,8 @@ public class NyBrukerServlet extends HttpServlet {
         String rettigheter = req.getParameter("rettigheter");
 
         Bruker bruker = new Bruker(epost, passord, rettigheter);
-//create a database model
+
+//Lag en database modell
     try {
         BrukerDB regBruker = new BrukerDB(MariaConnector.initializeDatabase());
 

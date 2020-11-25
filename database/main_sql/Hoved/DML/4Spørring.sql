@@ -1,3 +1,6 @@
+/* Dette er spørringer. Denne spørringen samler tre tabeller
+denne har vi eksempelvis brukt i hovedfunksjonen */
+
 SELECT D.Dato,
        M.År_Født 'Født',
        M.Fornavn,

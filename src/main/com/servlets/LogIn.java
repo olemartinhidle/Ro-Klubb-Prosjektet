@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+// Dette er en posthandler (at du gir noe, som skal respondere)
 
 @WebServlet("/LogIn")
 public class LogIn extends HttpServlet {
