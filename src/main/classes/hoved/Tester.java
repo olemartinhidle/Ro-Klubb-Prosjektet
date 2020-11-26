@@ -1,5 +1,6 @@
 package main.classes.hoved;
 
+import main.classes.Athlete;
 import main.classes.ConnectorLogIn;
 import main.classes.ConnectorTester;
 import main.classes.login.Bruker;
@@ -7,6 +8,7 @@ import main.classes.login.Bruker;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Tester {
 
@@ -53,7 +55,12 @@ public class Tester {
         this.antallBeveg = antallBeveg;
 
     }
+/**
+    public ArrayList<Tester> getTester() {
+        ArrayList<Tester> tests = new ArrayList<>();
 
+    }
+*/
 
     public String getDato() {
         return dato;

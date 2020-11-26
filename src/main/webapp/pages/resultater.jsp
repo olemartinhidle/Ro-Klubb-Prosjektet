@@ -18,39 +18,38 @@
 <body>
 
 <h1>
-    Welcome, <%= tester.getEpost() %></h1>
+    Dato: <%= tester.getDato() %></h1>
 <h3>
-    Your Account ID: <%= tester.getId() %> </h3>
+    Født: <%= tester.getFødt() %> </h3>
 <h3>
-    Your Access: <%= tester.getRettigheter() %> </h3>
+    Fornavn: <%= tester.getFornavn() %> </h3>
 <h3>
-    Your Password: <%= tester.getPassord() %></h3>
+    Etternavn: <%= tester.getEtternavn() %></h3>
 <h1>
-    Welcome, <%= tester.getEpost() %></h1>
+    Klubb: <%= tester.getKlubb() %></h1>
 <h3>
-    Your Account ID: <%= tester.getId() %> </h3>
+    Watt 5000 Meter: <%= tester.getFemtusenWatt() %> </h3>
 <h3>
-    Your Access: <%= tester.getRettigheter() %> </h3>
+    Tid 5000 Meter: <%= tester.getFemtusentid() %> </h3>
 <h3>
-    Your Password: <%= tester.getPassord() %></h3>
+    Watt 2000 Meter: <%= tester.getTotusenWatt() %></h3>
 <h1>
-    Welcome, <%= tester.getEpost() %></h1>
+    Tid 2000 Meter, <%= tester.getTotuseniTid() %></h1>
 <h3>
-    Your Account ID: <%= tester.getId() %> </h3>
+    Watt 60 Meter: <%= tester.getSekstiWatt() %> </h3>
 <h3>
-    Your Access: <%= tester.getRettigheter() %> </h3>
+    Ligg i ro prosent: <%= tester.getLiggiroProsent() %> </h3>
 <h3>
-    Your Password: <%= tester.getPassord() %></h3>
+    Ligg i ro KG: <%= tester.getLiggiroKG() %></h3>
+<h3>
+    Knebøy i prosent: <%= tester.getKnebøyiProsent() %> </h3>
+<h3>
+    Knebøy i KG: <%= tester.getKnebøyiKG() %></h3>
+<h3>
+    Antall beveg: <%= tester.getAntallBeveg() %> </h3>
 
 <br/><br/><br/><br/>
 
-<h1>Result Data</h1>
-<!--Sender en Get request ut til web app-->
-<form action=".././Resultater" method="Get">
-    </br></br></br>
-    <button style="animation-play-state: running" type="submit">Show Athlete</button>
-
-</form>
 
 <br/><br/>
 
