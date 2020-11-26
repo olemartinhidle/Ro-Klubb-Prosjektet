@@ -26,13 +26,13 @@ public class TestResultater extends HttpServlet {
 
         //feth data from login form
 
-        String logFornavn = req.getParameter("fornavn");
+        String logFornavn = req.getParameter("medlemsID");
 
         TesterDB tdb = null;
         try {
             tdb = new TesterDB(ConnectorLogIn.initializeDatabase());
 
-            ArrayList<Tester> tester = tdb.SøkEtterResultater(logFornavn);
+            Tester tester = tdb.SøkEtterResultater(logFornavn);
 
             if (tester != null) {
                 HttpSession session = req.getSession();

@@ -9,14 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class TesterDB {
-    Connection conn;
+    Connection con;
 
-    public TesterDB(Connection conn) {
-        this.conn = conn;
+    public TesterDB(Connection con) {
+        this.con = con;
     }
 
-    public ArrayList<Tester> SøkEtterResultater(String fornavn) {
-        ArrayList<Tester> tests = new ArrayList<>();
+    public Tester SøkEtterResultater(String fornavn) {
+        Tester tester = null;
         try {
 
         String query = "SELECT D.Dato,\n" +
@@ -41,15 +41,14 @@ public class TesterDB {
                 "              ON D.TestID = Dist.TestID AND M.MedlemsID = Dist.MedlemsID\n" +
                 "         JOIN RoForbundDB.StyrkeTester S\n" +
                 "              ON D.TestID = S.TestID AND M.MedlemsID = S.MedlemsID\n" +
-                "WHERE M.Fornavn = ?\n" +
+                "WHERE M.MedlemsID = ?\n" +
                 "ORDER BY Dato";
 
-            PreparedStatement pt = this.conn.prepareStatement(query);
+            PreparedStatement pt = this.con.prepareStatement(query);
             pt.setString(1, fornavn);
             ResultSet rs = pt.executeQuery();
 
-            while (rs.next()) {
-                Tester tester;
+            if (rs.next()) {
                 tester = new Tester();
                 tester.setDato(rs.getString("Dato"));
                 tester.setFødt(rs.getInt("Født"));
@@ -66,11 +65,10 @@ public class TesterDB {
                 tester.setKnebøyiProsent(rs.getString("KnebøyProsent"));
                 tester.setKnebøyiKG(rs.getInt("KnebøyKG"));
                 tester.setAntallBeveg(rs.getInt("AntallBeveg"));
-                tests.add(tester);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return tests;
+        return tester;
     }
 }

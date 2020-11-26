@@ -35,8 +35,8 @@
 <form action=".././SøkEtterResultater" method="Post">
     <br/>
     <p>Søk</p>
-    <input type="text" name="fornavn" placeholder="Søk etter fornavn">
-    <button style="animation-play-state: running" type="submit">Vis valgtes resultater over tid</button>
+    <input type="text" name="medlemsID" placeholder="Søk etter medlemsID">
+    <button style="animation-play-state: running" type="submit">Vis utøvers resultater</button>
 
 </form>
 
