@@ -14,6 +14,8 @@
     <a href="about.jsp">Om oss</a>
     <a href="edit.jsp">Rediger</a>
     <a href="registerUtøver.jsp"></a>
+    <a href="LeggTilDistanseTest.jsp"></a>
+    <a href="LeggTilStyrkeTest.jsp"></a>
 </header>
 <body>
 
