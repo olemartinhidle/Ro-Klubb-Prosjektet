@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
+import main.classes.Connector;
 import main.classes.login.Bruker;
 import main.classes.login.BrukerDB;
 
@@ -28,7 +28,7 @@ public class LogIn extends HttpServlet {
 
         BrukerDB bdb = null;
         try {
-            bdb = new BrukerDB(ConnectorLogIn.initializeDatabase());
+            bdb = new BrukerDB(Connector.initializeDatabase());
 
             Bruker bruker = bdb.logBruker(logepost, logpassord);
 

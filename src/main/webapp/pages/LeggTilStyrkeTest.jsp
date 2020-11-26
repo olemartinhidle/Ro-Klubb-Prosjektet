@@ -5,23 +5,22 @@
     <title>Legg Til Styrke</title>
 </head>
 <body>
-<form action=".././LeggTilStyrke" method="post">
-    <p>Brukernavn</p>
-    <input type="text" name="" placeholder="Skriv din E-post">
-    <p>Passord</p>
-    <input type="text" name="" placeholder="Skriv ditt passord">
-    <p>Brukernavn</p>
-    <input type="text" name="" placeholder="Skriv din E-post">
-    <p>Passord</p>
-    <input type="text" name="" placeholder="Skriv ditt passord">
-
-    <input type="text" name="" placeholder="Skriv din E-post">
-    <p>Passord</p>
-    <input type="text" name="" placeholder="Skriv ditt passord">
-    <p>Brukernavn</p>
-    <input type="text" name="" placeholder="Skriv din E-post">
-    <p>Passord</p>
-    <input type="text" name="" placeholder="Skriv ditt passord">
+<h1>Legg til Styrke Test</h1>
+<form action=".././regStyrke" method="post">
+    <p>TestID</p>
+    <input type="text" name="testID" placeholder="Skriv TestID">
+    <p>MedlemsID</p>
+    <input type="text" name="medlemsID" placeholder="Skriv MedlemsID">
+    <p>Ligg i ro prosent</p>
+    <input type="text" name="liggiroProsent" placeholder="Skriv Ligg i ro prosent">
+    <p>Ligg i ro KG</p>
+    <input type="text" name="liggiroKG" placeholder="Skriv ligg i ro KG">
+    <p>Knebøy i prosent</p>
+    <input type="text" name="knebøyiProsent" placeholder="Skriv knebøy i prosent">
+    <p>Knebøy i KG</p>
+    <input type="text" name="knebøyiKG" placeholder="Skriv knebøy i KG">
+    <p>Antall beveg</p>
+    <input type="text" name="antallBeveg" placeholder="Skriv antall beveg">
     <input type="submit" name="" value="Legg til styrketest">
 </form>
 </body>

@@ -14,12 +14,12 @@
     <servlet-name>nyBruker</servlet-name>
     <servlet-class>main.com.servlets.NyBrukerServlet</servlet-class>
   </servlet>
-<!--
+
   <servlet>
     <servlet-name>View_Table</servlet-name>
     <servlet-class>main.com.servlets.ReturnFromDB</servlet-class>
   </servlet>
-  -->
+
   <servlet>
     <servlet-name>LogUt</servlet-name>
     <servlet-class>main.com.servlets.LogUt</servlet-class>
@@ -31,8 +31,18 @@
   </servlet>
 
   <servlet>
-    <servlet-name>RegistrerUtøver</servlet-name>
+    <servlet-name>regUt</servlet-name>
     <servlet-class>main.com.servlets.RegistrerUtøver</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>regDist</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerDistanseTest</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>regStyrke</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerStyrkeTest</servlet-class>
   </servlet>
   
   
@@ -45,12 +55,12 @@
     <servlet-name>nyBruker</servlet-name>
     <url-pattern>/nyBruker</url-pattern>
   </servlet-mapping>
-<!--
+
   <servlet-mapping>
     <servlet-name>View_Table</servlet-name>
     <url-pattern>/ReturnTable</url-pattern>
   </servlet-mapping>
-  -->
+
   <servlet-mapping>
     <servlet-name>LogUt</servlet-name>
     <url-pattern>/LogUt</url-pattern>
@@ -62,8 +72,18 @@
   </servlet-mapping>
 
   <servlet-mapping>
-    <servlet-name>RegistrerUtøver</servlet-name>
-    <url-pattern>/RegistrerUtøver</url-pattern>
+    <servlet-name>regUt</servlet-name>
+    <url-pattern>/regUt</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>regDist</servlet-name>
+    <url-pattern>/regDist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>regStyrke</servlet-name>
+    <url-pattern>/regStyrke</url-pattern>
   </servlet-mapping>
 
 </web-app>

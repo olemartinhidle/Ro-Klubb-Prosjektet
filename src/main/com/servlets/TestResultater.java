@@ -1,14 +1,11 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
+import main.classes.Connector;
 import main.classes.hoved.Tester;
 import main.classes.hoved.TesterDB;
-import main.classes.login.Bruker;
-import main.classes.login.BrukerDB;
 
 import java.io.*;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,18 +23,18 @@ public class TestResultater extends HttpServlet {
 
         //feth data from login form
 
-        String logFornavn = req.getParameter("medlemsID");
+        String    logFornavn = req.getParameter("medlemsID");
 
         TesterDB tdb = null;
         try {
-            tdb = new TesterDB(ConnectorLogIn.initializeDatabase());
+            tdb = new TesterDB(Connector.initializeDatabase());
 
             Tester tester = tdb.SøkEtterResultater(logFornavn);
 
             if (tester != null) {
                 HttpSession session = req.getSession();
                 session.setAttribute("logTest", tester);
-                res.sendRedirect("pages/home.jsp");
+                res.sendRedirect("pages/resultater.jsp");
             } else {
                 out.println("user not found");
             }

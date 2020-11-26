@@ -1,8 +1,8 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
-import main.classes.login.Bruker;
-import main.classes.login.BrukerDB;
+import main.classes.Connector;
+import main.classes.hoved.StyrkeDB;
+import main.classes.hoved.StyrkeTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,32 +14,38 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/LeggTilStyrke")
+@WebServlet("/regStyrke")
 public class RegistrerStyrkeTest extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        PrintWriter writer;
+        PrintWriter out;
         res.setContentType("text/html");
-        writer = res.getWriter();
+        out = res.getWriter();
 
-        String epost = req.getParameter("epost");
-        String passord = req.getParameter("passord");
-        String rettigheter = req.getParameter("rettigheter");
 
-        Bruker bruker = new Bruker(epost, passord, rettigheter);
+        int testID = Integer.parseInt(req.getParameter("testID"));
+        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
+        String liggiroProsent  = req.getParameter("liggiroProsent");
+        int liggiroKG = Integer.parseInt(req.getParameter("liggiroKG"));
+        String knebøyiProsent = req.getParameter("knebøyiProsent");
+        int knebøyiKG = Integer.parseInt(req.getParameter("knebøyiKG"));
+        int antallBeveg =Integer.parseInt( req.getParameter("antallBeveg"));
+
+        StyrkeTest stest = new StyrkeTest(testID, medlemsID, liggiroProsent, liggiroKG, knebøyiProsent, knebøyiKG, antallBeveg);
+
 //create a database model
         try {
-            BrukerDB regBruker = new BrukerDB(ConnectorLogIn.initializeDatabase());
+            StyrkeDB regStyrke = new StyrkeDB(Connector.initializeDatabase());
 
-            if (regBruker.registrerBruker(bruker)) {
-                res.sendRedirect("index.jsp");
+            if (regStyrke.registrerStyrkeTest(stest)) {
+                res.sendRedirect("pages/Suksess.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/registrerBruker.jsp");
+                res.sendRedirect("index.jsp");
             }
 
         } catch (SQLException | ClassNotFoundException e) {

@@ -3,7 +3,6 @@ package main.classes.hoved;
 public class DistanseTest extends Test {
         int testID;
         int medlemsID;
-        String dato;
         int femtusenWatt;
         String femtuseniTid;
         int totusenWatt;
@@ -13,11 +12,10 @@ public class DistanseTest extends Test {
         public DistanseTest() {
         }
 
-        public DistanseTest(int testID,int medlemsID, String dato, int femtusenWatt, String femtuseniTid,
+        public DistanseTest(int testID,int medlemsID, int femtusenWatt, String femtuseniTid,
                             int totusenWatt, String totuseniTid, int sekstiWatt) {
                 this.testID = testID;
                 this.medlemsID = medlemsID;
-                this.dato = dato;
                 this.femtusenWatt = femtusenWatt;
                 this.femtuseniTid = femtuseniTid;
                 this.totusenWatt = totusenWatt;
@@ -32,14 +30,6 @@ public class DistanseTest extends Test {
         public int getMedlemsID() {return medlemsID;}
 
         public void setMedlemsID(int medlemsID) {this.medlemsID = medlemsID;}
-
-        public String getDato() {
-                return dato;
-        }
-
-        public void setDato(String dato) {
-                this.dato = dato;
-        }
 
         public int getFemtusenWatt() {
                 return femtusenWatt;
@@ -77,7 +67,7 @@ public class DistanseTest extends Test {
                 return sekstiWatt;
         }
 
-        public void setSekstiWatt(String SekstiWatt) {
+        public void setSekstiWatt(int sekstiWatt) {
                 this.sekstiWatt = sekstiWatt;
         }
 

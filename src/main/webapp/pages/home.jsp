@@ -13,9 +13,9 @@
     <a href="../index.jsp">Logg inn</a>
     <a href="about.jsp">Om oss</a>
     <a href="edit.jsp">Rediger</a>
-    <a href="registerUtøver.jsp"></a>
-    <a href="LeggTilDistanseTest.jsp"></a>
-    <a href="LeggTilStyrkeTest.jsp"></a>
+    <a href="registerUtøver.jsp">Registrer utøver</a>
+    <a href="LeggTilDistanseTest.jsp">Legg til distanse test</a>
+    <a href="LeggTilStyrkeTest.jsp">Legg til styrke test</a>
 </header>
 <body>
 

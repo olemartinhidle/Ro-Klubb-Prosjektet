@@ -1,12 +1,9 @@
 package main.classes.hoved;
 
-import main.classes.ConnectorTester;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class TesterDB {
     Connection con;
@@ -15,8 +12,10 @@ public class TesterDB {
         this.con = con;
     }
 
-    public Tester SøkEtterResultater(String fornavn) {
+    public Tester SøkEtterResultater(String medlemsID) {
         Tester tester = null;
+        PreparedStatement pt = null;
+        ResultSet rs = null;
         try {
 
         String query = "SELECT D.Dato,\n" +
@@ -25,7 +24,7 @@ public class TesterDB {
                 "       M.Etternavn,\n" +
                 "       M.Klubb,\n" +
                 "       Dist.5000M_Watt '5000Watt',\n" +
-                "       Dist.5000M_Tid '5000MTid',\n" +
+                "       Dist.5000M_Tid '5000Tid',\n" +
                 "       Dist.2000M_Watt '2000Watt',\n" +
                 "       Dist.2000M_Tid '2000Tid',\n" +
                 "       Dist.60M_Watt '60Watt',\n" +
@@ -41,12 +40,12 @@ public class TesterDB {
                 "              ON D.TestID = Dist.TestID AND M.MedlemsID = Dist.MedlemsID\n" +
                 "         JOIN RoForbundDB.StyrkeTester S\n" +
                 "              ON D.TestID = S.TestID AND M.MedlemsID = S.MedlemsID\n" +
-                "WHERE M.MedlemsID = ?\n" +
+                "WHERE M.MedlemsID = (?)\n" +
                 "ORDER BY Dato";
 
-            PreparedStatement pt = this.con.prepareStatement(query);
-            pt.setString(1, fornavn);
-            ResultSet rs = pt.executeQuery();
+            pt = this.con.prepareStatement(query);
+            pt.setString(1, medlemsID);
+            rs = pt.executeQuery();
 
             if (rs.next()) {
                 tester = new Tester();
@@ -59,7 +58,7 @@ public class TesterDB {
                 tester.setFemtusentid(rs.getString("5000Tid"));
                 tester.setTotusenWatt(rs.getInt("2000Watt"));
                 tester.setTotuseniTid(rs.getString("2000Tid"));
-                tester.setSekstiWatt(rs.getString("60Watt"));
+                tester.setSekstiWatt(rs.getInt("60Watt"));
                 tester.setLiggiroProsent(rs.getString("LiggroProsent"));
                 tester.setLiggiroKG(rs.getInt("LiggroKG"));
                 tester.setKnebøyiProsent(rs.getString("KnebøyProsent"));

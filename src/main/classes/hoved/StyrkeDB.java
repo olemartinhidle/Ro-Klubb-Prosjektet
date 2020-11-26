@@ -5,20 +5,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class StyrkeDB {
-    Connection conn;
+    Connection con;
 
-    public StyrkeDB(Connection conn) {
-        this.conn = conn;
+    public StyrkeDB(Connection con) {
+        this.con = con;
     }
 
     //for register user
     public boolean registrerStyrkeTest(StyrkeTest stest) {
-        boolean booll = false;
+        boolean bool = false;
         try {
             //Insert register data to database
             String query = " INSERT INTO RoForbundDB.StyrkeTester (TestID,MedlemsID,Ligg_Ro_Prosent, Ligg_Ro_KG, Knebøy_Prosent, Knebøy_KG, Antall_Beveg) VALUES(?,?,?,?,?,?,?)";
 
-            PreparedStatement p = this.conn.prepareStatement(query);
+            PreparedStatement p = this.con.prepareStatement(query);
             p.setInt(1, stest.getTestID());
             p.setInt(2, stest.getMedlemsID());
             p.setString(3, stest.getLiggiroProsent());
@@ -28,11 +28,11 @@ public class StyrkeDB {
             p.setInt(6, stest.getAntallBeveg());
 
             p.executeUpdate();
-            booll = true;
+            bool = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return booll;
+        return bool;
     }
 }
 

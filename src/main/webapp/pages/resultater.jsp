@@ -17,24 +17,24 @@
 </header>
 <body>
 
-<h1>
-    Dato: <%= tester.getDato() %></h1>
+<h3>
+    Dato: <%= tester.getDato() %></h3>
 <h3>
     Født: <%= tester.getFødt() %> </h3>
 <h3>
     Fornavn: <%= tester.getFornavn() %> </h3>
 <h3>
     Etternavn: <%= tester.getEtternavn() %></h3>
-<h1>
-    Klubb: <%= tester.getKlubb() %></h1>
+<h3>
+    Klubb: <%= tester.getKlubb() %></h3>
 <h3>
     Watt 5000 Meter: <%= tester.getFemtusenWatt() %> </h3>
 <h3>
     Tid 5000 Meter: <%= tester.getFemtusentid() %> </h3>
 <h3>
     Watt 2000 Meter: <%= tester.getTotusenWatt() %></h3>
-<h1>
-    Tid 2000 Meter, <%= tester.getTotuseniTid() %></h1>
+<h3>
+    Tid 2000 Meter, <%= tester.getTotuseniTid() %></h3>
 <h3>
     Watt 60 Meter: <%= tester.getSekstiWatt() %> </h3>
 <h3>

@@ -5,31 +5,34 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class MedlemDB {
-    Connection conn ;
+    Connection con ;
 
-    public MedlemDB(Connection conn) {
-        this.conn = conn;
+    public MedlemDB(Connection con) {
+        this.con = con;
     }
 
     //for register user
     public boolean registrerMedlem(Medlem medlem){
-        boolean bol = false;
+        boolean bool = false;
         try{
             //Insert register data to database
-            String query = "INSERT INTO RoForbundDB.Medlemmer(Fornavn,Etternavn,År_Født,Klubb) VALUES(?,?,?,?)";
+            String query = "INSERT INTO RoForbundDB.Medlemmer(KlasseID,KlubbID,Fornavn,Etternavn,År_Født,Stilling,Klubb,Klasse) VALUES(?,?,?,?)";
 
-            PreparedStatement pst = this.conn.prepareStatement(query);
+            PreparedStatement pst = this.con.prepareStatement(query);
+
+
+
             pst.setString(1, medlem.getFornavn());
             pst.setString(2, medlem.getEtternavn());
             pst.setInt(3, medlem.getFødt());
             pst.setString(4, medlem.getKlubb());
 
             pst.executeUpdate();
-            bol = true;
+            bool = true;
         }catch(Exception e){
             e.printStackTrace();
         }
-        return bol;
+        return bool;
     }
 
     //user login
@@ -37,7 +40,7 @@ public class MedlemDB {
         Medlem medlem=null;
         try{
             String query ="SELECT * FROM Brukere WHERE Epost=? AND Passord=?";
-            PreparedStatement pt = this.conn.prepareStatement(query);
+            PreparedStatement pt = this.con.prepareStatement(query);
             pt.setString(1, epost);
             pt.setString(2, passord);
 

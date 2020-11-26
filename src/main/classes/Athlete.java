@@ -65,7 +65,7 @@ public class Athlete {
     public ArrayList<Athlete> getUsers() {
         ArrayList<Athlete> athletes = new ArrayList<>();
         try (
-                Connection con = ConnectorLogIn.initializeDatabase();
+                Connection con = Connector.initializeDatabase();
                 PreparedStatement st = con.prepareStatement("" +
                         "SELECT D.Dato,\n" +
                         "       M.År_Født 'Født',\n" +
@@ -82,12 +82,12 @@ public class Athlete {
                         "       S.Knebøy_Prosent 'Knebøy i prosent',\n" +
                         "       S.Knebøy_KG 'Knebøy i KG',\n" +
                         "       S.Antall_Beveg\n" +
-                        "FROM Dato_Tester D\n" +
-                        "         JOIN Medlemmer M\n" +
+                        "FROM RoForbundDB.Dato_Tester D\n" +
+                        "         JOIN RoForbundDB.Medlemmer M\n" +
                         "              ON D.MedlemsID = M.MedlemsID\n" +
-                        "         JOIN DistanseTester Dist\n" +
+                        "         JOIN RoForbundDB.DistanseTester Dist\n" +
                         "              ON D.TestID = Dist.TestID AND M.MedlemsID = Dist.MedlemsID\n" +
-                        "         JOIN StyrkeTester S\n" +
+                        "         JOIN RoForbundDB.StyrkeTester S\n" +
                         "              ON D.TestID = S.TestID AND M.MedlemsID = S.MedlemsID\n" +
                         "WHERE D.MedlemsID = 1\n" +
                         "ORDER BY Dato;");

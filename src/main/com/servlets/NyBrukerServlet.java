@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
+import main.classes.Connector;
 import main.classes.login.Bruker;
 import main.classes.login.BrukerDB;
 
@@ -31,7 +31,7 @@ public class NyBrukerServlet extends HttpServlet {
         Bruker bruker = new Bruker(epost, passord, rettigheter);
 //create a database model
     try {
-        BrukerDB regBruker = new BrukerDB(ConnectorLogIn.initializeDatabase());
+        BrukerDB regBruker = new BrukerDB(Connector.initializeDatabase());
 
         if (regBruker.registrerBruker(bruker)) {
                 res.sendRedirect("index.jsp");

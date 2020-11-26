@@ -1,8 +1,8 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
-import main.classes.login.Bruker;
-import main.classes.login.BrukerDB;
+import main.classes.Connector;
+import main.classes.hoved.DistanseDB;
+import main.classes.hoved.DistanseTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,32 +14,36 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/LeggTilDistanse")
+@WebServlet("/regDist")
 public class RegistrerDistanseTest extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        PrintWriter writer;
+        PrintWriter out;
         res.setContentType("text/html");
-        writer = res.getWriter();
+        out = res.getWriter();
 
-        String epost = req.getParameter("epost");
-        String passord = req.getParameter("passord");
-        String rettigheter = req.getParameter("rettigheter");
+        int testID = Integer.parseInt(req.getParameter("testID"));
+        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
+        int femtusenWatt  = Integer.parseInt(req.getParameter("femtusenWatt"));
+        String femtuseniTid = req.getParameter("femtuseniTid");
+        int totusenWatt = Integer.parseInt(req.getParameter("totusenWatt"));
+        String totuseniTid = req.getParameter("totuseniTid");
+        int sekstiWatt =Integer.parseInt( req.getParameter("sekstiWatt"));
 
-        Bruker bruker = new Bruker(epost, passord, rettigheter);
+        DistanseTest dtest = new DistanseTest(testID, medlemsID, femtusenWatt, femtuseniTid, totusenWatt, totuseniTid, sekstiWatt);
 //create a database model
         try {
-            BrukerDB regBruker = new BrukerDB(ConnectorLogIn.initializeDatabase());
+            DistanseDB regDist = new DistanseDB(Connector.initializeDatabase());
 
-            if (regBruker.registrerBruker(bruker)) {
-                res.sendRedirect("index.jsp");
+            if (regDist.registrerDistanseTest(dtest)) {
+                res.sendRedirect("pages/Suksess.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/registrerBruker.jsp");
+                res.sendRedirect("pages/LeggTilDistanseTest.jsp");
             }
 
         } catch (SQLException | ClassNotFoundException e) {

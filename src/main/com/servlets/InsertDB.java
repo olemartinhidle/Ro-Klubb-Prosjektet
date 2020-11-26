@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
+import main.classes.Connector;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +24,7 @@ public class InsertDB extends HttpServlet {
         try {
 
             // Initialize the database
-            Connection con = ConnectorLogIn.initializeDatabase();
+            Connection con = Connector.initializeDatabase();
 
             // Create a SQL query to insert data into demo table
             // demo table consists of two columns, so two '?' is used

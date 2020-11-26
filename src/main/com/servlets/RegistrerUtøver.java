@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.ConnectorTester;
+import main.classes.Connector;
 import main.classes.hoved.Medlem;
 import main.classes.hoved.MedlemDB;
 
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/RegistrerUtøver")
+@WebServlet("/regUt")
 public class RegistrerUtøver extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -24,22 +24,28 @@ public class RegistrerUtøver extends HttpServlet {
         res.setContentType("text/html");
         out = res.getWriter();
 
+        int klasseID = Integer.parseInt(req.getParameter("klasseID"));
+        int klubbID = Integer.parseInt(req.getParameter("klubbID"));
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
         int født = Integer.parseInt(req.getParameter("født"));
+        String stilling =req.getParameter("stilling");
         String klubb = req.getParameter("klubb");
-        Medlem medlem = new Medlem(fornavn, etternavn, født, klubb);
+        String klasse = req.getParameter("klasse");
+
+        Medlem medlem = new Medlem(klasseID, klubbID, fornavn, etternavn, født, stilling, klubb, klasse);
+
 //create a database model
         try {
-            MedlemDB regMedlem = new MedlemDB(ConnectorTester.initializeDatabase());
+            MedlemDB regMedlem = new MedlemDB(Connector.initializeDatabase());
 
             if (regMedlem.registrerMedlem(medlem)) {
-                res.sendRedirect("pages/home.jsp");
+                res.sendRedirect("pages/Suksess.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/registrerUtøver.jsp");
+                res.sendRedirect("index.jsp");
             }
 
         } catch (SQLException | ClassNotFoundException e) {
