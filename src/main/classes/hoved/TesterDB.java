@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class TesterDB {
     Connection conn;
@@ -14,9 +15,10 @@ public class TesterDB {
         this.conn = conn;
     }
 
-    public Tester SøkEtterResultater(String fornavn) {
-        Tester tester = null;
+    public ArrayList<Tester> SøkEtterResultater(String fornavn) {
+        ArrayList<Tester> tests = new ArrayList<>();
         try {
+
         String query = "SELECT D.Dato,\n" +
                 "       M.År_Født 'Født',\n" +
                 "       M.Fornavn,\n" +
@@ -46,7 +48,8 @@ public class TesterDB {
             pt.setString(1, fornavn);
             ResultSet rs = pt.executeQuery();
 
-            if (rs.next()) {
+            while (rs.next()) {
+                Tester tester;
                 tester = new Tester();
                 tester.setDato(rs.getString("Dato"));
                 tester.setFødt(rs.getInt("Født"));
@@ -63,10 +66,11 @@ public class TesterDB {
                 tester.setKnebøyiProsent(rs.getString("KnebøyProsent"));
                 tester.setKnebøyiKG(rs.getInt("KnebøyKG"));
                 tester.setAntallBeveg(rs.getInt("AntallBeveg"));
+                tests.add(tester);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return tester;
+        return tests;
     }
 }

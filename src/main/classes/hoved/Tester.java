@@ -55,12 +55,12 @@ public class Tester {
         this.antallBeveg = antallBeveg;
 
     }
-/**
-    public ArrayList<Tester> getTester() {
-        ArrayList<Tester> tests = new ArrayList<>();
 
+    public ArrayList<Tester> getTester() {
+        ArrayList<Tester> Tester = new ArrayList<>();
+
+        return Tester;
     }
-*/
 
     public String getDato() {
         return dato;
@@ -176,6 +176,9 @@ public class Tester {
 
     public void setAntallBeveg(int antallBeveg) {
         this.antallBeveg = antallBeveg;
+    }
+
+    public void add(Tester tester) {
     }
 
 }

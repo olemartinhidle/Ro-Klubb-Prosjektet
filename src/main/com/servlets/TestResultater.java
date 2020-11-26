@@ -8,6 +8,7 @@ import main.classes.login.BrukerDB;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +32,7 @@ public class TestResultater extends HttpServlet {
         try {
             tdb = new TesterDB(ConnectorLogIn.initializeDatabase());
 
-            Tester tester = tdb.SøkEtterResultater(logFornavn);
+            ArrayList<Tester> tester = tdb.SøkEtterResultater(logFornavn);
 
             if (tester != null) {
                 HttpSession session = req.getSession();
