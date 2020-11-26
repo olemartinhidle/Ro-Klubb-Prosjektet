@@ -10,7 +10,8 @@
                 <li><a href="pages/results.jsp">Results</a></li>
                 <li><a href="pages/about.jsp">About us</a></li>
                 <li><a href="pages/edit.jsp">Edit</a></li>
-                <li><a href="pages/registrerMedlem.jsp">Registrer bruker</a></li>
+                <li><a href="pages/registrerBruker.jsp">Registrer bruker</a></li>
+                <li><a href="pages/registerUtøver.jsp"></a></li>
             </ul>
         </nav>
     </header>

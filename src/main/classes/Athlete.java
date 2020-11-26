@@ -65,8 +65,32 @@ public class Athlete {
     public ArrayList<Athlete> getUsers() {
         ArrayList<Athlete> athletes = new ArrayList<>();
         try (
-                Connection con = MariaConnector.initializeDatabase();
-                PreparedStatement st = con.prepareStatement("SELECT AthleteID, Name, Last_Name, PhoneNumber FROM RoForbundet.Athlete");
+                Connection con = ConnectorLogIn.initializeDatabase();
+                PreparedStatement st = con.prepareStatement("" +
+                        "SELECT D.Dato,\n" +
+                        "       M.År_Født 'Født',\n" +
+                        "       M.Fornavn,\n" +
+                        "       M.Etternavn,\n" +
+                        "       M.Klubb,\n" +
+                        "       Dist.5000M_Watt '5000M i Watt',\n" +
+                        "       Dist.5000M_Tid '5000M i tid',\n" +
+                        "       Dist.2000M_Watt '2000M i Watt',\n" +
+                        "       Dist.2000M_Tid '2000M i tid',\n" +
+                        "       Dist.60M_Watt '60M i Watt',\n" +
+                        "       S.Ligg_Ro_Prosent 'Ligg ro i Prosent',\n" +
+                        "       S.Ligg_Ro_KG 'Ligg ro i KG',\n" +
+                        "       S.Knebøy_Prosent 'Knebøy i prosent',\n" +
+                        "       S.Knebøy_KG 'Knebøy i KG',\n" +
+                        "       S.Antall_Beveg\n" +
+                        "FROM Dato_Tester D\n" +
+                        "         JOIN Medlemmer M\n" +
+                        "              ON D.MedlemsID = M.MedlemsID\n" +
+                        "         JOIN DistanseTester Dist\n" +
+                        "              ON D.TestID = Dist.TestID AND M.MedlemsID = Dist.MedlemsID\n" +
+                        "         JOIN StyrkeTester S\n" +
+                        "              ON D.TestID = S.TestID AND M.MedlemsID = S.MedlemsID\n" +
+                        "WHERE D.MedlemsID = 1\n" +
+                        "ORDER BY Dato;");
                 ResultSet rs = st.executeQuery()
         ) {
             while (rs.next()) {

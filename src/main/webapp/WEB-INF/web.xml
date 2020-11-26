@@ -24,6 +24,16 @@
     <servlet-name>LogUt</servlet-name>
     <servlet-class>main.com.servlets.LogUt</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>SøkEtterResultater</servlet-name>
+    <servlet-class>main.com.servlets.TestResultater</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RegistrerUtøver</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerUtøver</servlet-class>
+  </servlet>
   
   
   <servlet-mapping>
@@ -44,6 +54,16 @@
   <servlet-mapping>
     <servlet-name>LogUt</servlet-name>
     <url-pattern>/LogUt</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SøkEtterResultater</servlet-name>
+    <url-pattern>/SøkEtterResultater</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegistrerUtøver</servlet-name>
+    <url-pattern>/RegistrerUtøver</url-pattern>
   </servlet-mapping>
 
 </web-app>

@@ -1,6 +1,8 @@
 package main.com.servlets;
 
 import main.classes.ConnectorLogIn;
+import main.classes.hoved.Tester;
+import main.classes.hoved.TesterDB;
 import main.classes.login.Bruker;
 import main.classes.login.BrukerDB;
 
@@ -13,8 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/LogIn")
-public class LogIn extends HttpServlet {
+@WebServlet("/SøkEtterResultater")
+public class TestResultater extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -23,18 +25,17 @@ public class LogIn extends HttpServlet {
 
         //feth data from login form
 
-        String logepost = req.getParameter("epost");
-        String logpassord = req.getParameter("passord");
+        String logFornavn = req.getParameter("fornavn");
 
-        BrukerDB bdb = null;
+        TesterDB tdb = null;
         try {
-            bdb = new BrukerDB(ConnectorLogIn.initializeDatabase());
+            tdb = new TesterDB(ConnectorLogIn.initializeDatabase());
 
-            Bruker bruker = bdb.logBruker(logepost, logpassord);
+            Tester tester = tdb.SøkEtterResultater(logFornavn);
 
-            if (bruker != null) {
+            if (tester != null) {
                 HttpSession session = req.getSession();
-                session.setAttribute("logUser", bruker);
+                session.setAttribute("logTest", tester);
                 res.sendRedirect("pages/home.jsp");
             } else {
                 out.println("user not found");

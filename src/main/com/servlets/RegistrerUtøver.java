@@ -1,8 +1,8 @@
 package main.com.servlets;
 
-import main.classes.ConnectorLogIn;
-import main.classes.login.Bruker;
-import main.classes.login.BrukerDB;
+import main.classes.ConnectorTester;
+import main.classes.hoved.Medlem;
+import main.classes.hoved.MedlemDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,33 +14,33 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/nyBruker")
-public class NyBrukerServlet extends HttpServlet {
+@WebServlet("/RegistrerUtøver")
+public class RegistrerUtøver extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        PrintWriter writer;
+        PrintWriter out;
         res.setContentType("text/html");
-        writer = res.getWriter();
+        out = res.getWriter();
 
-        String epost = req.getParameter("epost");
-        String passord = req.getParameter("passord");
-        String rettigheter = req.getParameter("rettigheter");
-
-        Bruker bruker = new Bruker(epost, passord, rettigheter);
+        String fornavn = req.getParameter("fornavn");
+        String etternavn = req.getParameter("etternavn");
+        int født = Integer.parseInt(req.getParameter("født"));
+        String klubb = req.getParameter("klubb");
+        Medlem medlem = new Medlem(fornavn, etternavn, født, klubb);
 //create a database model
-    try {
-        BrukerDB regBruker = new BrukerDB(ConnectorLogIn.initializeDatabase());
+        try {
+            MedlemDB regMedlem = new MedlemDB(ConnectorTester.initializeDatabase());
 
-        if (regBruker.registrerBruker(bruker)) {
-                res.sendRedirect("index.jsp");
-        } else {
+            if (regMedlem.registrerMedlem(medlem)) {
+                res.sendRedirect("pages/home.jsp");
+            } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/registrerBruker.jsp");
-        }
+                res.sendRedirect("pages/registrerUtøver.jsp");
+            }
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
