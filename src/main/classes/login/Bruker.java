@@ -9,8 +9,6 @@ import java.sql.SQLException;
 // Her lager man en brukerklasse som kan brukes av brukerDB klassen.
 // BrukerDB klassen er en databasehandler for brukerklassen
 // det vil si at den kombinerer database med klassene
-
-
         public class Bruker {
             int id;
             String epost;

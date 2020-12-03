@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 // Dette er en posthandler (at du gir noe, som skal respondere)
-
 @WebServlet("/LogIn")
 public class LogIn extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -25,7 +24,6 @@ public class LogIn extends HttpServlet {
         PrintWriter out = res.getWriter();
 
         //feth data from login form
-
         String logepost = req.getParameter("epost");
         String logpassord = req.getParameter("passord");
 

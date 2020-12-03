@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 @WebServlet("/nyBruker")
-public class NyBrukerServlet extends HttpServlet {
+public class NyBrukerServlet extends HttpServlet { // Extends brukes for å angi superklassen.
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -23,6 +23,7 @@ public class NyBrukerServlet extends HttpServlet {
         PrintWriter writer;
         res.setContentType("text/html");
         writer = res.getWriter();
+
 
         String epost = req.getParameter("epost");
         String passord = req.getParameter("passord");
