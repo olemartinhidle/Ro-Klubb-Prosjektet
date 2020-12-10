@@ -1,6 +1,6 @@
 package main.classes.login;
 
-import main.classes.MariaConnector;
+import main.classes.Connector;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +29,7 @@ public class Users {
         String query;
         query = "SELECT Passord FROM RoForbundet.Brukere WHERE Epost=?";
         try {
-            PreparedStatement st = MariaConnector.initializeDatabase().prepareStatement(query);
+            PreparedStatement st = Connector.initializeDatabase().prepareStatement(query);
             st.setString(1, Epost);
             ResultSet rs = st.executeQuery();
             if(rs.next()) {

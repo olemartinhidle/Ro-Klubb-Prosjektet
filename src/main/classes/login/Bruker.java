@@ -1,19 +1,11 @@
 package main.classes.login;
 
-import main.classes.MariaConnector;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-// Her lager man en brukerklasse som kan brukes av brukerDB klassen.
-// BrukerDB klassen er en databasehandler for brukerklassen
-// det vil si at den kombinerer database med klassene
-        public class Bruker {
-            int id;
-            String epost;
-            String passord;
-            String rettigheter;
+public class Bruker {
+        int id;
+        String epost;
+        String passord;
+        String rettigheter;
 
         public Bruker() {
         }

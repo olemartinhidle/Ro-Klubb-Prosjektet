@@ -1,6 +1,6 @@
 package main.com.servlets;
 
-import main.classes.MariaConnector;
+import main.classes.Connector;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,13 +23,15 @@ public class InsertDB extends HttpServlet {
         PrintWriter  writer = response.getWriter();
         try {
 
-            // Oppretter forbindelse yil databasen
-            Connection con = MariaConnector.initializeDatabase();
+
+            // Initialize the database
+            Connection con = Connector.initializeDatabase();
+
 
             // Utfør SQL spørring
             // demo table consists of two columns, so two '?' is used
 
-            PreparedStatement st = con.prepareStatement("INSERT INTO RoForbundet.Athlete values (?, ?, ?, ?)");
+            PreparedStatement st = con.prepareStatement("INSERT INTO RoForbundDB.StyrkeTester values (?, ?, ?, ?)");
 
             // For the first parameter,
             // get the data using request object

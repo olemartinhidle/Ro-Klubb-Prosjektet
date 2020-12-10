@@ -1,8 +1,8 @@
 package main.com.servlets;
 
 import main.classes.Connector;
-import main.classes.login.Bruker;
-import main.classes.login.BrukerDB;
+import main.classes.hoved.Tester;
+import main.classes.hoved.TesterDB;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-// Dette er en posthandler (at du gir noe, som skal respondere)
-@WebServlet("/LogIn")
-public class LogIn extends HttpServlet {
+
+@WebServlet("/SøkEtterResultater")
+public class TestResultater extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -22,19 +22,19 @@ public class LogIn extends HttpServlet {
         PrintWriter out = res.getWriter();
 
         //feth data from login form
-        String logepost = req.getParameter("epost");
-        String logpassord = req.getParameter("passord");
 
-        BrukerDB bdb = null;
+        String    logFornavn = req.getParameter("medlemsID");
+
+        TesterDB tdb = null;
         try {
-            bdb = new BrukerDB(Connector.initializeDatabase());
+            tdb = new TesterDB(Connector.initializeDatabase());
 
-            Bruker bruker = bdb.logBruker(logepost, logpassord);
+            Tester tester = tdb.SøkEtterResultater(logFornavn);
 
-            if (bruker != null) {
+            if (tester != null) {
                 HttpSession session = req.getSession();
-                session.setAttribute("logUser", bruker);
-                res.sendRedirect("pages/home.jsp");
+                session.setAttribute("logTest", tester);
+                res.sendRedirect("pages/resultater.jsp");
             } else {
                 out.println("user not found");
             }

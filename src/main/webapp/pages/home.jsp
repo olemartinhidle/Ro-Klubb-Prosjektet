@@ -10,10 +10,12 @@
     <title>JSP Page</title>
 </head>
 <header>
-    <a href="../index.jsp">LogIn</a>
-    <a href="results.jsp">Results</a>
-    <a href="about.jsp">About us</a>
-    <a href="edit.jsp">Edit</a>
+    <a href="../index.jsp">Logg inn</a>
+    <a href="about.jsp">Om oss</a>
+    <a href="edit.jsp">Rediger</a>
+    <a href="registerUtøver.jsp">Registrer utøver</a>
+    <a href="LeggTilDistanseTest.jsp">Legg til distanse test</a>
+    <a href="LeggTilStyrkeTest.jsp">Legg til styrke test</a>
 </header>
 <body>
 
@@ -25,6 +27,20 @@
     Your Access: <%= bruker.getRettigheter() %> </h3>
 <h3>
     Your Password: <%= bruker.getPassord() %></h3>
+
+<br/><br/><br/><br/>
+
+<h1>Resultater</h1>
+<!--Sender en post request ut til web app-->
+<form action=".././SøkEtterResultater" method="Post">
+    <br/>
+    <p>Søk</p>
+    <input type="text" name="medlemsID" placeholder="Søk etter medlemsID">
+    <button style="animation-play-state: running" type="submit">Vis utøvers resultater</button>
+
+</form>
+
+<br/><br/>
 
 <button><a href=".././LogUt">Log Out</a></button>
 </body>
