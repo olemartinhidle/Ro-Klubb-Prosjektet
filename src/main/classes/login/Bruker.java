@@ -1,5 +1,6 @@
 package main.classes.login;
 
+
 public class Bruker {
         int id;
         String epost;
@@ -27,6 +28,9 @@ public class Bruker {
             this.rettigheter = rettigheter;
         }
 
+
+        // Get = henter stringen
+        // Set = setter stringen
         public int getId() {
             return id;
         }
@@ -58,5 +62,4 @@ public class Bruker {
         public void setRettigheter(String rettigheter) {
             this.rettigheter = rettigheter;
         }
-
 }

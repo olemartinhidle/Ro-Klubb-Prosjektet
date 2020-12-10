@@ -1,4 +1,4 @@
-create table RoForbundDB.Klubber
+create table Klubber
 (
     KlubbID    int auto_increment
         primary key,

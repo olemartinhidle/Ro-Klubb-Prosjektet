@@ -1,3 +1,7 @@
+USE RoFornundet;
+
+/* Dette er skriptet på hvordan vi lagde brukere */
+
 create table Brukere
 (
     BrukerID    int auto_increment

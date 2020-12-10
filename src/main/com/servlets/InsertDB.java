@@ -23,10 +23,12 @@ public class InsertDB extends HttpServlet {
         PrintWriter  writer = response.getWriter();
         try {
 
+
             // Initialize the database
             Connection con = Connector.initializeDatabase();
 
-            // Create a SQL query to insert data into demo table
+
+            // Utfør SQL spørring
             // demo table consists of two columns, so two '?' is used
 
             PreparedStatement st = con.prepareStatement("INSERT INTO RoForbundDB.StyrkeTester values (?, ?, ?, ?)");
