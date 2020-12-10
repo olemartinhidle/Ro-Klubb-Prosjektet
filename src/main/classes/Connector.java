@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 // This class can be used to initialize the database connection
-public class MariaConnector {
+public class Connector {
     private static Connection con;
 
     public static Connection initializeDatabase()

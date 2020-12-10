@@ -1,11 +1,5 @@
 package main.classes.login;
 
-import main.classes.MariaConnector;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 public class Bruker {
         int id;
         String epost;

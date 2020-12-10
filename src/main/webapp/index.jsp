@@ -5,14 +5,10 @@
         <link rel="stylesheet" href="styles/indexstyle.css">
 </head>
     <header>
-        <nav>
-            <ul>
-                <li><a href="pages/results.jsp">Results</a></li>
-                <li><a href="pages/about.jsp">About us</a></li>
-                <li><a href="pages/edit.jsp">Edit</a></li>
-                <li><a href="pages/registrerMedlem.jsp">Registrer bruker</a></li>
-            </ul>
-        </nav>
+        <a href="pages/results.jsp"> List results</a>
+        <a href="pages/about.jsp">Om oss</a>
+        <a href="pages/edit.jsp">Rediger lista</a>
+        <a href="pages/registrerBruker.jsp">Registrer deg</a>
     </header>
 <body>
 
