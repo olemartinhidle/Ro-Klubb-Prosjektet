@@ -1,8 +1,8 @@
-package main.com.servlets;
+package main.com.servlet;
 
-import main.classes.Connector;
-import main.classes.hoved.DistanseDB;
-import main.classes.hoved.DistanseTest;
+import main.modell.Connector;
+import main.modell.hoved.StyrkeDB;
+import main.modell.hoved.StyrkeTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/regDist")
-public class RegistrerDistanseTest extends HttpServlet {
+@WebServlet("/regStyrke")
+public class RegistrerStyrkeTest extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -24,26 +24,28 @@ public class RegistrerDistanseTest extends HttpServlet {
         res.setContentType("text/html");
         out = res.getWriter();
 
-        String testID = req.getParameter("testID");
-        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
-        int femtusenWatt  = Integer.parseInt(req.getParameter("femtusenWatt"));
-        String femtuseniTid = req.getParameter("femtuseniTid");
-        int totusenWatt = Integer.parseInt(req.getParameter("totusenWatt"));
-        String totuseniTid = req.getParameter("totuseniTid");
-        int sekstiWatt =Integer.parseInt( req.getParameter("sekstiWatt"));
 
-        DistanseTest distansetest = new DistanseTest(testID, medlemsID, femtusenWatt, femtuseniTid, totusenWatt, totuseniTid, sekstiWatt);
+        String testID = req.getParameter("testID");
+        String medlemsID = req.getParameter("medlemsID");
+        String liggiroProsent  = req.getParameter("liggiroProsent");
+        int liggiroKG = Integer.parseInt(req.getParameter("liggiroKG"));
+        String knebøyiProsent = req.getParameter("kneiProsent");
+        int knebøyiKG = Integer.parseInt(req.getParameter("kneiKG"));
+        int antallBeveg =Integer.parseInt( req.getParameter("antallBeveg"));
+
+        StyrkeTest styrketest = new StyrkeTest(testID, medlemsID, liggiroProsent, liggiroKG, knebøyiProsent, knebøyiKG, antallBeveg);
+
 //create a database model
         try {
-            DistanseDB regDist = new DistanseDB(Connector.initializeDatabase());
+            StyrkeDB regStyrke = new StyrkeDB(Connector.initializeDatabase());
 
-            if (regDist.registrerDistanseTest(distansetest)) {
+            if (regStyrke.registrerStyrkeTest(styrketest)) {
                 res.sendRedirect("pages/Suksess.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/LeggTilDistanseTest.jsp");
+                res.sendRedirect("index.jsp");
             }
 
         } catch (SQLException | ClassNotFoundException e) {

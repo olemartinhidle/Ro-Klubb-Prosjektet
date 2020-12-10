@@ -1,8 +1,8 @@
-package main.com.servlets;
+package main.com.servlet;
 
-import main.classes.Connector;
-import main.classes.hoved.DistanseDB;
-import main.classes.hoved.DistanseTest;
+import main.modell.Connector;
+import main.modell.hoved.DistanseDB;
+import main.modell.hoved.DistanseTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +25,7 @@ public class RegistrerDistanseTest extends HttpServlet {
         out = res.getWriter();
 
         String testID = req.getParameter("testID");
-        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
+        String medlemsID = req.getParameter("medlemsID");
         int femtusenWatt  = Integer.parseInt(req.getParameter("femtusenWatt"));
         String femtuseniTid = req.getParameter("femtuseniTid");
         int totusenWatt = Integer.parseInt(req.getParameter("totusenWatt"));

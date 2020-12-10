@@ -1,7 +1,9 @@
-package main.classes.hoved;
+package main.modell.hoved;
 
 public class StyrkeTest extends Test {
 
+    String testID;
+    String medlemsID;
     String liggiroProsent;
     int liggiroKG;
     String knebøyiProsent;
@@ -10,7 +12,7 @@ public class StyrkeTest extends Test {
 
     public StyrkeTest() {
     }
-    public StyrkeTest(String testID, int medlemsID, String liggiroProsent,
+    public StyrkeTest(String testID, String medlemsID, String liggiroProsent,
                       int liggiroKG, String knebøyiProsent, int knebøyiKG,
                       int antallBeveg) {
         this.testID = testID;
@@ -21,6 +23,14 @@ public class StyrkeTest extends Test {
         this.knebøyiKG = knebøyiKG;
         this.antallBeveg = antallBeveg;
     }
+
+    public String getTestID() {     return testID; }
+
+    public void setTestID(String testID) {this.testID = testID;}
+
+    public String getMedlemsID() {return medlemsID;}
+
+    public void setMedlemsID(String medlemsID) {this.medlemsID = medlemsID;}
 
     public String getLiggiroProsent() {
         return liggiroProsent;

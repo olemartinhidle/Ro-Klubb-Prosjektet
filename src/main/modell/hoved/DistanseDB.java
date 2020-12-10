@@ -1,4 +1,4 @@
-package main.classes.hoved;
+package main.modell.hoved;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +20,7 @@ public class DistanseDB {
 
             PreparedStatement pst = this.con.prepareStatement(query);
             pst.setString(1, distansetest.getTestID());
-            pst.setInt(2, distansetest.getMedlemsID());
+            pst.setString(2, distansetest.getMedlemsID());
             pst.setInt(3, distansetest.getFemtusenWatt());
             pst.setString(4, distansetest.getFemtuseniTid());
             pst.setInt(5, distansetest.getTotusenWatt());

@@ -1,8 +1,7 @@
-package main.classes.hoved;
+package main.modell.hoved;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 public class StyrkeDB {
     Connection con;
@@ -18,16 +17,16 @@ public class StyrkeDB {
             //Insert register data to database
             String query = " INSERT INTO RoForbundDB.StyrkeTester (TestID,MedlemsID,Ligg_Ro_Prosent, Ligg_Ro_KG, Knebøy_Prosent, Knebøy_KG, Antall_Beveg) VALUES(?,?,?,?,?,?,?)";
 
-            PreparedStatement p = this.con.prepareStatement(query);
-            p.setString(1, styrketest.getTestID());
-            p.setInt(2, styrketest.getMedlemsID());
-            p.setString(3, styrketest.getLiggiroProsent());
-            p.setInt(4, styrketest.getLiggiroKG());
-            p.setString(5, styrketest.getKnebøyiProsent());
-            p.setInt(6, styrketest.getKnebøyiKG());
-            p.setInt(6, styrketest.getAntallBeveg());
+            PreparedStatement pst = this.con.prepareStatement(query);
+            pst.setString(1, styrketest.getTestID());
+            pst.setString(2, styrketest.getMedlemsID());
+            pst.setString(3, styrketest.getLiggiroProsent());
+            pst.setInt(4, styrketest.getLiggiroKG());
+            pst.setString(5, styrketest.getKnebøyiProsent());
+            pst.setInt(6, styrketest.getKnebøyiKG());
+            pst.setInt(7, styrketest.getAntallBeveg());
 
-            p.executeUpdate();
+            pst.executeUpdate();
             bool = true;
         } catch (Exception e) {
             e.printStackTrace();
