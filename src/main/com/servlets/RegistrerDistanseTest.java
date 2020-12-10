@@ -32,12 +32,12 @@ public class RegistrerDistanseTest extends HttpServlet {
         String totuseniTid = req.getParameter("totuseniTid");
         int sekstiWatt =Integer.parseInt( req.getParameter("sekstiWatt"));
 
-        DistanseTest dtest = new DistanseTest(testID, medlemsID, femtusenWatt, femtuseniTid, totusenWatt, totuseniTid, sekstiWatt);
+        DistanseTest distansetest = new DistanseTest(testID, medlemsID, femtusenWatt, femtuseniTid, totusenWatt, totuseniTid, sekstiWatt);
 //create a database model
         try {
             DistanseDB regDist = new DistanseDB(Connector.initializeDatabase());
 
-            if (regDist.registrerDistanseTest(dtest)) {
+            if (regDist.registrerDistanseTest(distansetest)) {
                 res.sendRedirect("pages/Suksess.jsp");
             } else {
                 String errorMessage = "User Available";

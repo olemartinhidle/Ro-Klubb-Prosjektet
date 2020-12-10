@@ -11,7 +11,7 @@ public class DistanseDB {
     }
 
     //for register user
-    public boolean registrerDistanseTest(DistanseTest dtest){
+    public boolean registrerDistanseTest(DistanseTest distansetest){
         boolean bool = false;
         try{
             //Insert register data to database
@@ -19,13 +19,13 @@ public class DistanseDB {
 
 
             PreparedStatement pst = this.con.prepareStatement(query);
-            pst.setInt(1, dtest.getTestID());
-            pst.setInt(2, dtest.getMedlemsID());
-            pst.setInt(3, dtest.getFemtusenWatt());
-            pst.setString(4, dtest.getFemtuseniTid());
-            pst.setInt(5, dtest.getTotusenWatt());
-            pst.setString(6, dtest.getTotuseniTid());
-            pst.setInt(7, dtest.getSekstiWatt());
+            pst.setInt(1, distansetest.getTestID());
+            pst.setInt(2, distansetest.getMedlemsID());
+            pst.setInt(3, distansetest.getFemtusenWatt());
+            pst.setString(4, distansetest.getFemtuseniTid());
+            pst.setInt(5, distansetest.getTotusenWatt());
+            pst.setString(6, distansetest.getTotuseniTid());
+            pst.setInt(7, distansetest.getSekstiWatt());
 
             pst.executeUpdate();
             bool = true;

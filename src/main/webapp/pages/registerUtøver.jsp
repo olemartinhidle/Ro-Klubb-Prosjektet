@@ -9,6 +9,8 @@
 
 <form action=".././regUt" method="post">
 
+    <p>MedlemsID</p>
+    <input type="text" name="medlemsID" placeholder="Skriv medlemsID">
     <p>KlasseID</p>
     <input type="text" name="klasseID" placeholder="Skriv klasseID">
     <p>KlubbID</p>

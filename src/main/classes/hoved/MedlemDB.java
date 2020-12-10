@@ -16,16 +16,19 @@ public class MedlemDB {
         boolean bool = false;
         try{
             //Insert register data to database
-            String query = "INSERT INTO RoForbundDB.Medlemmer(KlasseID,KlubbID,Fornavn,Etternavn,År_Født,Stilling,Klubb,Klasse) VALUES(?,?,?,?)";
+            String query = "INSERT INTO RoForbundDB.Medlemmer(MedlemsID, KlasseID,KlubbID,Fornavn,Etternavn,År_Født,Stilling,Klubb,Klasse) VALUES(?,?,?,?,?,?,?,?)";
 
             PreparedStatement pst = this.con.prepareStatement(query);
 
 
-
-            pst.setString(1, medlem.getFornavn());
-            pst.setString(2, medlem.getEtternavn());
-            pst.setInt(3, medlem.getFødt());
-            pst.setString(4, medlem.getKlubb());
+            pst.setInt(1, medlem.getKlasseID());
+            pst.setInt(2, medlem.getKlubbID());
+            pst.setString(3, medlem.getFornavn());
+            pst.setString(4, medlem.getEtternavn());
+            pst.setInt(5, medlem.getFødt());
+            pst.setString(6, medlem.getStilling());
+            pst.setString(7, medlem.getKlubb());
+            pst.setString(8, medlem.getKlasse());
 
             pst.executeUpdate();
             bool = true;

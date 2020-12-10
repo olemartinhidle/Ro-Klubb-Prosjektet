@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1033.8683908045978" y="280.0">main.com.servlets.RegistrerStyrkeTest</node>
+    <node x="1014.6614942528738" y="0.0">main.classes.hoved.Test</node>
+    <node x="1073.1183908045978" y="170.0">main.classes.hoved.StyrkeDB</node>
+    <node x="797.8683908045978" y="280.0">main.com.servlets.RegistrerDistanseTest</node>
+    <node x="617.8683908045978" y="280.0">main.com.servlets.TestResultater</node>
+    <node x="485.8683908045978" y="280.0">main.com.servlets.InsertDB</node>
+    <node x="272.1683908045979" y="80.0">main.classes.login.Bruker</node>
+    <node x="21.068390804597698" y="80.0">main.classes.hoved.Medlem</node>
+    <node x="1122.8367816091954" y="80.0">main.classes.hoved.StyrkeTest</node>
+    <node x="481.8683908045978" y="170.0">main.classes.Connector</node>
+    <node x="1.8683908045978797" y="280.0">main.com.servlets.RegistrerUtøver</node>
+    <node x="189.86839080459782" y="280.0">main.com.servlets.NyBrukerServlet</node>
+    <node x="836.7183908045978" y="170.0">main.classes.hoved.DistanseDB</node>
+    <node x="0.0" y="355.0">main.com.servlets.LogUt</node>
+    <node x="10.5" y="170.0">main.classes.hoved.MedlemDB</node>
+    <node x="903.2183908045978" y="80.0">main.classes.hoved.DistanseTest</node>
+    <node x="682.8448275862071" y="170.0">main.classes.hoved.TesterDB</node>
+    <node x="273.75000000000017" y="170.0">main.classes.login.BrukerDB</node>
+    <node x="674.8448275862071" y="80.0">main.classes.hoved.Tester</node>
+    <node x="377.8683908045978" y="280.0">main.com.servlets.LogIn</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.com.servlets.NyBrukerServlet" target="main.classes.login.BrukerDB">
+      <point x="1.1368683772161603E-13" y="-15.0" />
+      <point x="273.86839080459794" y="230.0" />
+      <point x="287.75000000000017" y="230.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.TestResultater" target="main.classes.hoved.Tester">
+      <point x="-20.0" y="-15.0" />
+      <point x="677.8683908045978" y="260.0" />
+      <point x="672.3448275862071" y="260.0" />
+      <point x="672.3448275862071" y="150.0" />
+      <point x="690.8448275862071" y="150.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.MedlemDB" target="main.classes.hoved.Medlem">
+      <point x="-28.0" y="-15.0" />
+      <point x="38.5" y="150.0" />
+      <point x="57.0683908045977" y="150.0" />
+      <point x="-12.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerUtøver" target="main.classes.hoved.Medlem">
+      <point x="33.59999999999991" y="-15.0" />
+      <point x="119.46839080459779" y="230.0" />
+      <point x="151.15344827586222" y="230.0" />
+      <point x="151.15344827586222" y="150.0" />
+      <point x="105.0683908045977" y="150.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerStyrkeTest" target="main.classes.hoved.StyrkeDB">
+      <point x="-40.0" y="-15.0" />
+      <point x="1093.8683908045978" y="260.0" />
+      <point x="1101.1183908045978" y="260.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.StyrkeTest" target="main.classes.hoved.Test">
+      <point x="0.0" y="-15.0" />
+      <point x="1186.8367816091954" y="55.0" />
+      <point x="1074.6614942528738" y="55.0" />
+      <point x="20.0" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.StyrkeDB" target="main.classes.hoved.StyrkeTest">
+      <point x="0.0" y="-15.0" />
+      <point x="1129.1183908045978" y="150.0" />
+      <point x="1144.170114942529" y="150.0" />
+      <point x="-42.666666666666664" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerStyrkeTest" target="main.classes.Connector">
+      <point x="-80.0" y="-15.0" />
+      <point x="1053.8683908045978" y="240.0" />
+      <point x="593.2969622331693" y="240.0" />
+      <point x="51.428571428571445" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerUtøver" target="main.classes.Connector">
+      <point x="67.20000000000005" y="-15.0" />
+      <point x="153.06839080459793" y="240.0" />
+      <point x="490.4398193760264" y="240.0" />
+      <point x="-51.428571428571445" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.DistanseTest" target="main.classes.hoved.Test">
+      <point x="0.0" y="-15.0" />
+      <point x="975.2183908045978" y="55.0" />
+      <point x="1034.6614942528738" y="55.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.LogIn" target="main.classes.login.BrukerDB">
+      <point x="-33.0" y="-15.0" />
+      <point x="388.8683908045978" y="230.0" />
+      <point x="343.75000000000017" y="230.0" />
+      <point x="14.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.InsertDB" target="main.classes.Connector">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.NyBrukerServlet" target="main.classes.login.Bruker">
+      <point x="-33.59999999999991" y="-15.0" />
+      <point x="240.2683908045979" y="230.0" />
+      <point x="227.24482758620718" y="230.0" />
+      <point x="227.24482758620718" y="140.0" />
+      <point x="300.96839080459785" y="140.0" />
+      <point x="-19.200000000000045" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.TestResultater" target="main.classes.hoved.TesterDB">
+      <point x="20.0" y="-15.0" />
+      <point x="717.8683908045978" y="260.0" />
+      <point x="710.8448275862071" y="260.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.NyBrukerServlet" target="main.classes.Connector">
+      <point x="67.20000000000016" y="-15.0" />
+      <point x="341.068390804598" y="250.0" />
+      <point x="507.5826765188835" y="250.0" />
+      <point x="-34.285714285714334" y="15.0" />
+    </edge>
+    <edge source="main.classes.login.BrukerDB" target="main.classes.login.Bruker">
+      <point x="-28.0" y="-15.0" />
+      <point x="301.75000000000017" y="150.0" />
+      <point x="320.1683908045979" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.LogIn" target="main.classes.login.Bruker">
+      <point x="11.0" y="-15.0" />
+      <point x="432.8683908045978" y="230.0" />
+      <point x="437.1183908045978" y="230.0" />
+      <point x="437.1183908045978" y="140.0" />
+      <point x="358.56839080459787" y="140.0" />
+      <point x="38.39999999999998" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.TesterDB" target="main.classes.hoved.Tester">
+      <point x="-28.0" y="-15.0" />
+      <point x="710.8448275862071" y="150.0" />
+      <point x="722.8448275862071" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="main.classes.hoved.DistanseDB" target="main.classes.hoved.DistanseTest">
+      <point x="0.0" y="-15.0" />
+      <point x="900.7183908045978" y="150.0" />
+      <point x="927.2183908045978" y="150.0" />
+      <point x="-48.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerUtøver" target="main.classes.hoved.MedlemDB">
+      <point x="-33.59999999999991" y="-15.0" />
+      <point x="52.26839080459797" y="260.0" />
+      <point x="38.5" y="260.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.TestResultater" target="main.classes.Connector">
+      <point x="-60.0" y="-15.0" />
+      <point x="637.8683908045978" y="260.0" />
+      <point x="559.0112479474549" y="260.0" />
+      <point x="17.14285714285711" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.LogIn" target="main.classes.Connector">
+      <point x="33.0" y="-15.0" />
+      <point x="454.8683908045978" y="260.0" />
+      <point x="524.7255336617407" y="260.0" />
+      <point x="-17.14285714285711" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerStyrkeTest" target="main.classes.hoved.StyrkeTest">
+      <point x="80.00000000000006" y="-15.0" />
+      <point x="1213.8683908045978" y="260.0" />
+      <point x="1206.6183908045978" y="260.0" />
+      <point x="1206.6183908045978" y="150.0" />
+      <point x="1229.5034482758622" y="150.0" />
+      <point x="42.66666666666663" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerDistanseTest" target="main.classes.hoved.DistanseTest">
+      <point x="43.19999999999999" y="-15.0" />
+      <point x="949.0683908045978" y="260.0" />
+      <point x="981.1500000000001" y="260.0" />
+      <point x="981.1500000000001" y="150.0" />
+      <point x="975.2183908045978" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerDistanseTest" target="main.classes.hoved.DistanseDB">
+      <point x="-43.19999999999999" y="-15.0" />
+      <point x="862.6683908045978" y="260.0" />
+      <point x="868.7183908045978" y="260.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="main.com.servlets.RegistrerDistanseTest" target="main.classes.Connector">
+      <point x="-86.39999999999998" y="-15.0" />
+      <point x="819.4683908045979" y="250.0" />
+      <point x="576.1541050903122" y="250.0" />
+      <point x="34.285714285714334" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="405.0" y="243.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

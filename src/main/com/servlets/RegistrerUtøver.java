@@ -24,6 +24,7 @@ public class RegistrerUtøver extends HttpServlet {
         res.setContentType("text/html");
         out = res.getWriter();
 
+        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
         int klasseID = Integer.parseInt(req.getParameter("klasseID"));
         int klubbID = Integer.parseInt(req.getParameter("klubbID"));
         String fornavn = req.getParameter("fornavn");
@@ -33,7 +34,7 @@ public class RegistrerUtøver extends HttpServlet {
         String klubb = req.getParameter("klubb");
         String klasse = req.getParameter("klasse");
 
-        Medlem medlem = new Medlem(klasseID, klubbID, fornavn, etternavn, født, stilling, klubb, klasse);
+        Medlem medlem = new Medlem(medlemsID, klasseID, klubbID, fornavn, etternavn, født, stilling, klubb, klasse);
 
 //create a database model
         try {

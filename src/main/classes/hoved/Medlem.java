@@ -1,6 +1,7 @@
 package main.classes.hoved;
 
 public class Medlem {
+    int medlemsID;
     int klasseID;
     int klubbID;
     String fornavn;
@@ -13,8 +14,9 @@ public class Medlem {
     public Medlem() {
     }
 
-    public Medlem(int klasseID, int klubbID, String fornavn, String etternavn,
+    public Medlem(int medlemsID ,int klasseID, int klubbID, String fornavn, String etternavn,
                   int født,String stilling, String klubb, String klasse) {
+        this.medlemsID = medlemsID;
         this.klasseID = klasseID;
         this.klubbID = klubbID;
         this.fornavn = fornavn;
@@ -24,6 +26,10 @@ public class Medlem {
         this.klubb = klubb;
         this.klasse = klasse;
     }
+
+    public int getMedlemsID() { return medlemsID; }
+
+    public void setMedlemsID(int medlemsID) { this.medlemsID = medlemsID; }
 
     public int getKlasseID() {
         return klasseID;
