@@ -25,7 +25,7 @@ public class RegistrerStyrkeTest extends HttpServlet {
         out = res.getWriter();
 
 
-        int testID = Integer.parseInt(req.getParameter("testID"));
+        String testID = req.getParameter("testID");
         int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
         String liggiroProsent  = req.getParameter("liggiroProsent");
         int liggiroKG = Integer.parseInt(req.getParameter("liggiroKG"));

@@ -2,11 +2,11 @@ package main.classes.hoved;
 
 public abstract class Test {
     int medlemsID;
-    int testID;
+    String testID;
 
-    public int getTestID() {     return testID; }
+    public String getTestID() {     return testID; }
 
-    public void setTestID(int testID) {this.testID = testID;}
+    public void setTestID(String testID) {this.testID = testID;}
 
     public int getMedlemsID() {return medlemsID;}
 

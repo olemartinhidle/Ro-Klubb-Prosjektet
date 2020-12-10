@@ -1,7 +1,7 @@
 package main.classes.hoved;
 
 public class DistanseTest extends Test {
-        int testID;
+        String testID;
         int medlemsID;
         int femtusenWatt;
         String femtuseniTid;
@@ -12,7 +12,7 @@ public class DistanseTest extends Test {
         public DistanseTest() {
         }
 
-        public DistanseTest(int testID,int medlemsID, int femtusenWatt, String femtuseniTid,
+        public DistanseTest(String testID,int medlemsID, int femtusenWatt, String femtuseniTid,
                             int totusenWatt, String totuseniTid, int sekstiWatt) {
                 this.testID = testID;
                 this.medlemsID = medlemsID;
@@ -23,9 +23,9 @@ public class DistanseTest extends Test {
                 this.sekstiWatt = sekstiWatt;
         }
 
-        public int getTestID() {     return testID; }
+        public String getTestID() {     return testID; }
 
-        public void setTestID(int testID) {this.testID = testID;}
+        public void setTestID(String testID) {this.testID = testID;}
 
         public int getMedlemsID() {return medlemsID;}
 

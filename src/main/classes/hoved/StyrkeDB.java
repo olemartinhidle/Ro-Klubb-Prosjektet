@@ -19,7 +19,7 @@ public class StyrkeDB {
             String query = " INSERT INTO RoForbundDB.StyrkeTester (TestID,MedlemsID,Ligg_Ro_Prosent, Ligg_Ro_KG, Knebøy_Prosent, Knebøy_KG, Antall_Beveg) VALUES(?,?,?,?,?,?,?)";
 
             PreparedStatement p = this.con.prepareStatement(query);
-            p.setInt(1, styrketest.getTestID());
+            p.setString(1, styrketest.getTestID());
             p.setInt(2, styrketest.getMedlemsID());
             p.setString(3, styrketest.getLiggiroProsent());
             p.setInt(4, styrketest.getLiggiroKG());

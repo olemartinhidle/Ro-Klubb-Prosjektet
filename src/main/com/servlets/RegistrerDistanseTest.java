@@ -24,7 +24,7 @@ public class RegistrerDistanseTest extends HttpServlet {
         res.setContentType("text/html");
         out = res.getWriter();
 
-        int testID = Integer.parseInt(req.getParameter("testID"));
+        String testID = req.getParameter("testID");
         int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
         int femtusenWatt  = Integer.parseInt(req.getParameter("femtusenWatt"));
         String femtuseniTid = req.getParameter("femtuseniTid");

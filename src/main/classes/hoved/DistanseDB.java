@@ -19,7 +19,7 @@ public class DistanseDB {
 
 
             PreparedStatement pst = this.con.prepareStatement(query);
-            pst.setInt(1, distansetest.getTestID());
+            pst.setString(1, distansetest.getTestID());
             pst.setInt(2, distansetest.getMedlemsID());
             pst.setInt(3, distansetest.getFemtusenWatt());
             pst.setString(4, distansetest.getFemtuseniTid());

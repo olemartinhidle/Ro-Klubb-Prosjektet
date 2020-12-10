@@ -25,7 +25,7 @@ public class Connector {
         try {
             Class.forName(dbDriver);
 
-            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/RoForbundet?user=root&password=Ex20200702-IS201");
+            con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/RoForbundDB?user=root&password=Ex20200702-IS201");
 
 
         } catch (ClassNotFoundException | SQLException e) {

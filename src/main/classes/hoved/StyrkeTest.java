@@ -10,7 +10,7 @@ public class StyrkeTest extends Test {
 
     public StyrkeTest() {
     }
-    public StyrkeTest(int testID, int medlemsID, String liggiroProsent,
+    public StyrkeTest(String testID, int medlemsID, String liggiroProsent,
                       int liggiroKG, String knebøyiProsent, int knebøyiKG,
                       int antallBeveg) {
         this.testID = testID;
