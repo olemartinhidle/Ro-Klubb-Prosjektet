@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+// denne gjelder ikke. Dette var en test/prototype
+
 public class Users {
     String Rettigheter;
     String Epost;

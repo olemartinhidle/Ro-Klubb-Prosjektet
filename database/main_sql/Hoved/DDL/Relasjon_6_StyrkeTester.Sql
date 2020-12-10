@@ -11,6 +11,6 @@ create table RoForbundDB.StyrkeTester
     constraint StyrkeTester_Medlemmer_MedlemsID_fk
         foreign key (MedlemsID) references RoForbundDB.Medlemmer (MedlemsID),
     constraint StyrkeTester_Tester_TestID_fk
-        foreign key (TestID) references RoForbundDB.Dato_Tester (TestID)
+        foreign key (TestID) references RoForbundDB.Tester (TestID)
 );
 

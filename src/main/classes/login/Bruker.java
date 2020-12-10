@@ -6,11 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Bruker {
-        int id;
-        String epost;
-        String passord;
-        String rettigheter;
+// Her lager man en brukerklasse som kan brukes av brukerDB klassen.
+// BrukerDB klassen er en databasehandler for brukerklassen
+// det vil si at den kombinerer database med klassene
+        public class Bruker {
+            int id;
+            String epost;
+            String passord;
+            String rettigheter;
 
         public Bruker() {
         }
@@ -33,6 +36,9 @@ public class Bruker {
             this.rettigheter = rettigheter;
         }
 
+
+        // Get = henter stringen
+        // Set = setter stringen
         public int getId() {
             return id;
         }
@@ -64,5 +70,4 @@ public class Bruker {
         public void setRettigheter(String rettigheter) {
             this.rettigheter = rettigheter;
         }
-
 }

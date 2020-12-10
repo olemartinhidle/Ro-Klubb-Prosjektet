@@ -4,6 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+// Denne klassen lager en databasehandler for brukerobjekter.
+// Det vil si at den kombinerer databasen med klassene (de som er skrevet i java)
+
+// Den klassen har flere metoder som kommer under
+
 public class BrukerDB {
     Connection con ;
 

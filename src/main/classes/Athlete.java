@@ -1,4 +1,4 @@
-package main.classes;
+package main.classes; // hentes i mappe main --> classes
 
 
 import java.sql.Connection;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class Athlete {
+public class Athlete { // (tester) denne er grå fordi den ikke brukes lengre
     int AthleteID;
     String Name;
     String Last_Name;
@@ -45,7 +45,6 @@ public class Athlete {
     public void setNumber(String PhoneNumber) {
 
         this.PhoneNumber = PhoneNumber;
-
     }
 
     public String getNumber() {
@@ -59,27 +58,33 @@ public class Athlete {
     public String toString() {
 
         return AthleteID + Name + Last_Name + PhoneNumber;
-
     }
 
+    // lager en liste, inni denne listen lager vi en athleter som er et objekt inni lista.
     public ArrayList<Athlete> getUsers() {
         ArrayList<Athlete> athletes = new ArrayList<>();
+
+        // preparedstatement lagrer en sql beskjed, som kan brukes som spørring til senere bruk.
+        // Bra å bruke debuggeren når man legger inn en spørring.
         try (
                 Connection con = MariaConnector.initializeDatabase();
                 PreparedStatement st = con.prepareStatement("SELECT AthleteID, Name, Last_Name, PhoneNumber FROM RoForbundet.Athlete");
-                ResultSet rs = st.executeQuery()
-        ) {
-            while (rs.next()) {
-                Athlete athlete;
+                ResultSet rs = st.executeQuery() // betyr å
+        )
+
+         //
+        {
+            while (rs.next()) {           // neste ting innenfor queryen, gjøre det igjen og igjen for hver index
+                Athlete athlete;         // for hver enkelt av disse indexene (test),
                 athlete = new Athlete();
-                athlete.setId(rs.getInt("AthleteID"));
-                athlete.setName(rs.getString("Name"));
-                athlete.setLastName(rs.getString("Last_Name"));
-                athlete.setNumber(rs.getString("PhoneNumber"));
-                athletes.add(athlete);
+                athlete.setId(rs.getInt("AthleteID")); // testID
+                athlete.setName(rs.getString("Name")); // medlemsID
+                athlete.setLastName(rs.getString("Last_Name")); // testnavn
+                athlete.setNumber(rs.getString("PhoneNumber")); //  testnavn
+                athletes.add(athlete); // siste du gjør. Da adder den alle variablene du har lagt til.
             }
 
-            return athletes;
+            return athletes; // sender opp alle athletene / testene fra lista
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
