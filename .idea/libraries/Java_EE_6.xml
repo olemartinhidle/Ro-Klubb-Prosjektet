@@ -1,16 +1,16 @@
 <component name="libraryTable">
   <library name="Java EE 6">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.annotation.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.ejb.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.jms.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.persistence.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.resource.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.servlet.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.servlet.jsp.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.servlet.jsp.jstl.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/javax.transaction.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/lib/mariadb-java-client-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.resource.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.servlet.jsp.jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/bib/mariadb-java-client-2.6.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
