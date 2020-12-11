@@ -1,8 +1,8 @@
 package main.com.servlets;
 
 import main.modell.Connector;
-import main.modell.forbund.StyrkeDB;
-import main.modell.forbund.StyrkeTest;
+import main.modell.forbund.Medlem;
+import main.modell.forbund.MedlemDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/regStyrke")
-public class RegistrerStyrkeTest extends HttpServlet {
+@WebServlet("/regMedlem")
+public class RegistrerMedlem extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -24,22 +24,23 @@ public class RegistrerStyrkeTest extends HttpServlet {
         res.setContentType("text/html");
         out = res.getWriter();
 
+        String medlemsID = req.getParameter("medlemsID");
+        int klasseID = Integer.parseInt(req.getParameter("klasseID"));
+        int klubbID = Integer.parseInt(req.getParameter("klubbID"));
+        String fornavn = req.getParameter("fornavn");
+        String etternavn = req.getParameter("etternavn");
+        int født = Integer.parseInt(req.getParameter("fodt"));
+        String stilling =req.getParameter("stilling");
+        String klubb = req.getParameter("klubb");
+        String klasse = req.getParameter("klasse");
 
-        String testID = req.getParameter("testID");
-        int medlemsID = Integer.parseInt(req.getParameter("medlemsID"));
-        String liggiroProsent  = req.getParameter("liggiroProsent");
-        int liggiroKG = Integer.parseInt(req.getParameter("liggiroKG"));
-        String knebøyiProsent = req.getParameter("kneiProsent");
-        int knebøyiKG = Integer.parseInt(req.getParameter("kneiKG"));
-        int antallBeveg =Integer.parseInt( req.getParameter("antallBeveg"));
-
-        StyrkeTest stest = new StyrkeTest(testID, medlemsID, liggiroProsent, liggiroKG, knebøyiProsent, knebøyiKG, antallBeveg);
+        Medlem medlem = new Medlem(medlemsID, klasseID, klubbID, fornavn, etternavn, født, stilling, klubb, klasse);
 
 //create a database model
         try {
-            StyrkeDB regStyrke = new StyrkeDB(Connector.initializeDatabase());
+            MedlemDB regMedlem = new MedlemDB(Connector.initializeDatabase());
 
-            if (regStyrke.registrerStyrkeTest(stest)) {
+            if (regMedlem.registrerMedlem(medlem)) {
                 res.sendRedirect("jsp/suksess.jsp");
             } else {
                 String errorMessage = "User Available";

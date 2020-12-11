@@ -1,0 +1,79 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+  <servlet-name>LoggInn</servlet-name>
+  <servlet-class>main.com.servlets.LoggInn</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NyBruker</servlet-name>
+    <servlet-class>main.com.servlets.RegisterWebBruker</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LoggUt</servlet-name>
+    <servlet-class>main.com.servlets.LoggUt</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SøkEtterResultater</servlet-name>
+    <servlet-class>main.com.servlets.HentResultater</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RegMedlem</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerMedlem</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RegDist</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerDistanseTest</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RegStyrke</servlet-name>
+    <servlet-class>main.com.servlets.RegistrerStyrkeTest</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>LoggInn</servlet-name>
+    <url-pattern>/loggInn</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>NyBruker</servlet-name>
+    <url-pattern>/nyBruker</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LoggUt</servlet-name>
+    <url-pattern>/loggUt</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SøkEtterResultater</servlet-name>
+    <url-pattern>/søkEtterResultater</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegMedlem</servlet-name>
+    <url-pattern>/regMedlem</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegDist</servlet-name>
+    <url-pattern>/regDist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegStyrke</servlet-name>
+    <url-pattern>/regStyrke</url-pattern>
+  </servlet-mapping>
+
+</web-app>

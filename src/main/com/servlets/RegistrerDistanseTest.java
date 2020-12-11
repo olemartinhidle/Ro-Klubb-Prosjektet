@@ -1,8 +1,8 @@
 package main.com.servlets;
 
-import main.classes.Connector;
-import main.classes.hoved.DistanseDB;
-import main.classes.hoved.DistanseTest;
+import main.modell.Connector;
+import main.modell.forbund.DistanseDB;
+import main.modell.forbund.DistanseTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,12 +38,12 @@ public class RegistrerDistanseTest extends HttpServlet {
             DistanseDB regDist = new DistanseDB(Connector.initializeDatabase());
 
             if (regDist.registrerDistanseTest(distansetest)) {
-                res.sendRedirect("pages/Suksess.jsp");
+                res.sendRedirect("jsp/suksess.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                res.sendRedirect("pages/LeggTilDistanseTest.jsp");
+                res.sendRedirect("jsp/leggTilDistanseTest.jsp");
             }
 
         } catch (SQLException | ClassNotFoundException e) {

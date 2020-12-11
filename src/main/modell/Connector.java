@@ -16,7 +16,7 @@ public class Connector {
         // Initialize all the information regarding
         // Database Connection
         String dbDriver = "org.mariadb.jdbc.Driver";
-        String dbURL = "jdbc:mariadb://127.0.0.1:3306/RoForbundet";
+        String dbURL = "jdbc:mariadb://127.0.0.1:3306/RoForbundDB";
         // Database name to access
         String dbName = "@DockerDB";
         String dbUsername = "root";
