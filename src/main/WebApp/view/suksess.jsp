@@ -6,7 +6,7 @@
 <body>
 <br/>
 <div>
-<center><h1>  Suksess!!  </h1> </center>
+<center><h1>  Suksess!  </h1> </center>
 
 </div>
 
