@@ -2,8 +2,6 @@ package main.modell.forbund;
 
 public class StyrkeTest extends Test {
 
-    String testID;
-    int medlemsID;
     String liggiroProsent;
     int liggiroKG;
     String knebøyiProsent;

@@ -1,8 +1,7 @@
 package main.modell.forbund;
 
 public class DistanseTest extends Test {
-        String testID;
-        int medlemsID;
+
         int femtusenWatt;
         String femtuseniTid;
         int totusenWatt;

@@ -7,37 +7,37 @@
 
   <servlet>
   <servlet-name>LoggInn</servlet-name>
-  <servlet-class>main.com.servlets.LoggInn</servlet-class>
+  <servlet-class>main.kontroller.servlets.LoggInn</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>NyBruker</servlet-name>
-    <servlet-class>main.com.servlets.RegisterWebBruker</servlet-class>
+    <servlet-class>main.kontroller.servlets.RegisterWebBruker</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>LoggUt</servlet-name>
-    <servlet-class>main.com.servlets.LoggUt</servlet-class>
+    <servlet-class>main.kontroller.servlets.LoggUt</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>SøkEtterResultater</servlet-name>
-    <servlet-class>main.com.servlets.HentResultater</servlet-class>
+    <servlet-class>main.kontroller.servlets.HentResultater</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>RegMedlem</servlet-name>
-    <servlet-class>main.com.servlets.RegistrerMedlem</servlet-class>
+    <servlet-class>main.kontroller.servlets.RegistrerMedlem</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>RegDist</servlet-name>
-    <servlet-class>main.com.servlets.RegistrerDistanseTest</servlet-class>
+    <servlet-class>main.kontroller.servlets.RegistrerDistanseTest</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>RegStyrke</servlet-name>
-    <servlet-class>main.com.servlets.RegistrerStyrkeTest</servlet-class>
+    <servlet-class>main.kontroller.servlets.RegistrerStyrkeTest</servlet-class>
   </servlet>
   
   

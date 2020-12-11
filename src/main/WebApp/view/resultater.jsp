@@ -2,7 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% Tester tester = (Tester) session.getAttribute("logTest");
     if(tester==null){
-        response.sendRedirect("hjem.jsp"); }                           %>
+        response.sendRedirect("hjem.view"); }                           %>
 <!DOCTYPE html>
 <html>
 <head>

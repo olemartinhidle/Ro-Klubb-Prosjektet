@@ -2,11 +2,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Roprosjekt</title>
-        <link rel="stylesheet" href="css/indexstyle.css">
+        <link rel="stylesheet" href="view/css/indexstyle.css">
 </head>
     <header>
-        <a href="jsp/omOss.jsp">Om oss</a>
-        <a href="jsp/registrerBruker.jsp">Registrer deg</a>
+        <a href="view/omOss.jsp">Om oss</a>
+        <a href="view/registrerBruker.jsp">Registrer deg</a>
     </header>
 <body>
 
