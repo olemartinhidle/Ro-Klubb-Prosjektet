@@ -41,7 +41,7 @@ public class RegisterWebBruker extends HttpServlet { // Extends brukes for å an
                 res.sendRedirect("index.jsp");
         } else {
             //Hvis man ikke får brukeren godkjent, lages en session for å klargjøre feilen, kan så legges til error melding
-                String errorMessage = "User Available";
+                String errorMessage = "Bruker ikke tilgjengelig";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
                 //Bruker sendes så rett tilbake til registereringssiden for å få prøve på nytt

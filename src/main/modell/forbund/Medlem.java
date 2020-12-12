@@ -1,5 +1,5 @@
 package main.modell.forbund;
-
+//Klasse for medlemsmodell som kan være input i MedlemsDB
 public class Medlem {
 
     String medlemsID;
@@ -11,10 +11,10 @@ public class Medlem {
     String stilling;
     String klubb;
     String klasse;
-
+//Tom meldems modell constructor
     public Medlem() {
     }
-
+//Mer utfyllende constructor for medlems modell
     public Medlem(String medlemsID ,int klasseID, int klubbID, String fornavn, String etternavn,
                   int født,String stilling, String klubb, String klasse) {
         this.medlemsID = medlemsID;
@@ -27,6 +27,8 @@ public class Medlem {
         this.klubb = klubb;
         this.klasse = klasse;
     }
+//Under kommer ulike Get ere og Set ere for å hente ut eller sette inn data i modellen
+
 
     public String getMedlemsID() { return medlemsID; }
 

@@ -3,6 +3,7 @@
 <% Bruker bruker = (Bruker) session.getAttribute("logUser");
     if(bruker==null){
         response.sendRedirect("index.jsp"); }                           %>
+<!--  Over utnytter vi dataene fra brukermodellen til å finne ulik informasjon og sjekke tilgang -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +19,14 @@
 <body>
 
 <h1>
-    Welcome, <%= bruker.getEpost() %></h1>
+    <!-- Under henter vi ut dataene fra objektet -->
+    Velkommen, <%= bruker.getEpost() %></h1>
 <h3>
-    Your Account ID: <%= bruker.getId() %> </h3>
+    Din bruker ID: <%= bruker.getId() %> </h3>
 <h3>
-    Your Access: <%= bruker.getRettigheter() %> </h3>
+    Din stilling: <%= bruker.getRettigheter() %> </h3>
 <h3>
-    Your Password: <%= bruker.getPassord() %></h3>
+    Ditt passor er: <%= bruker.getPassord() %></h3>
 
 <br/><br/><br/><br/>
 
@@ -40,6 +42,6 @@
 
 <br/><br/>
 
-<button><a href=".././loggUt">Log Out</a></button>
+<button><a href=".././loggUt">Logg ut</a></button>
 </body>
 </html>

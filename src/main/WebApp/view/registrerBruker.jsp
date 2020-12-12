@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Roprosjekt</title>
-    <link rel="stylesheet" href="../styles/indexstyle.css">
+    <link rel="stylesheet" href="css/indexstyle.css">
 </head>
 <header>
     <nav>
         <ul>
-            <li><a href="results.jsp">Results</a></li>
             <li><a href="omOss.jsp">About us</a></li>
-            <li><a href="edit.jsp">Edit</a></li>
         </ul>
     </nav>
 </header>

@@ -1,5 +1,5 @@
 package main.modell.forbund;
-
+//Her har vi en distanse test modell som arver fra test
 public class DistanseTest extends Test {
 
         int femtusenWatt;
@@ -7,10 +7,10 @@ public class DistanseTest extends Test {
         int totusenWatt;
         String totuseniTid;
         int sekstiWatt;
-
+//Tom constructor
         public DistanseTest() {
         }
-
+//Mer utfyllende constructor
         public DistanseTest(String testID,int medlemsID, int femtusenWatt, String femtuseniTid,
                             int totusenWatt, String totuseniTid, int sekstiWatt) {
                 this.testID = testID;
@@ -21,7 +21,8 @@ public class DistanseTest extends Test {
                 this.totuseniTid = totuseniTid;
                 this.sekstiWatt = sekstiWatt;
         }
-
+        //Get ere henter ut data
+        //Set ere setter inn data
         public String getTestID() {     return testID; }
 
         public void setTestID(String testID) {this.testID = testID;}

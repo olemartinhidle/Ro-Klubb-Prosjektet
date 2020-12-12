@@ -1,5 +1,5 @@
 package main.modell.forbund;
-
+//Abstrakt klasse som samler funksjonalitet fra Distansetester og StyrkeTester
 public abstract class Test {
     int medlemsID;
     String testID;

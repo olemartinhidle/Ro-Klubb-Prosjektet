@@ -45,7 +45,7 @@ public class RegistrerStyrkeTest extends HttpServlet {
                 res.sendRedirect("view/suksess.jsp");
             } else {
                 //Ved feil lages en feilmelding
-                String errorMessage = "User Available";
+                String errorMessage = "Bruker ikke tilgjengelig";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
                 res.sendRedirect("index.jsp");

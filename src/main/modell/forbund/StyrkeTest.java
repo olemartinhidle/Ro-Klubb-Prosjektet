@@ -1,5 +1,5 @@
 package main.modell.forbund;
-
+//Klasse for StyrkeTest modell, som arver fra Test
 public class StyrkeTest extends Test {
 
     String liggiroProsent;
@@ -7,9 +7,10 @@ public class StyrkeTest extends Test {
     String knebøyiProsent;
     int knebøyiKG;
     int antallBeveg;
-
+//Tom constructor for modell
     public StyrkeTest() {
     }
+    //Mer definert constructor
     public StyrkeTest(String testID, int medlemsID, String liggiroProsent,
                       int liggiroKG, String knebøyiProsent, int knebøyiKG,
                       int antallBeveg) {
@@ -21,6 +22,9 @@ public class StyrkeTest extends Test {
         this.knebøyiKG = knebøyiKG;
         this.antallBeveg = antallBeveg;
     }
+
+    //Gett ere henter data, "finner"
+    //Set ere innsetter eller lagrer data
 
     public String getTestID() {     return testID; }
 

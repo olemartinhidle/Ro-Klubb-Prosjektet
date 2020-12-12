@@ -3,6 +3,7 @@
 <% Tester tester = (Tester) session.getAttribute("logTest");
     if(tester==null){
         response.sendRedirect("hjem.view"); }                           %>
+<!-- Vi utnytter dataene fra test modellen til å finne frem test resultatene, og eventuelt sender bruker tilbake om bruker ikke eksisterer -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,7 @@
     <a href="registerUtøver.jsp"></a>
 </header>
 <body>
+<!-- Under henter vi ut dataene fra objektet -->
 <center><h1>Nyligste resultater</h1></center>
 <h3>
     Dato: <%= tester.getDato() %></h3>

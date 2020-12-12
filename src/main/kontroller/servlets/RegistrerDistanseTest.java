@@ -43,7 +43,7 @@ public class RegistrerDistanseTest extends HttpServlet {
                 res.sendRedirect("view/suksess.jsp");
             } else {
                 //Om noe skulle gå galt så lages en feilmelding
-                String errorMessage = "User Available";
+                String errorMessage = "Bruker ikke tilgjengelig";
                 HttpSession regSession = req.getSession();
                 regSession.setAttribute("RegError", errorMessage);
                 res.sendRedirect("view/leggTilDistanseTest.jsp");

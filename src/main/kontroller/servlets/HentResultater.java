@@ -29,17 +29,20 @@ public class HentResultater extends HttpServlet {
         TesterDB tdb = null;
 //Try catch løkke for kvalitetssikringen
         try {
+            //Her definerer vi en testDB modell
             tdb = new TesterDB(Connector.initializeDatabase());
-
+            //Her oppretter vi en test modell og kombinerer test modellen med TestDB modell
             Tester tester = tdb.SøkEtterResultater(logFornavn);
-
+            //Her oppretter vi en sessionb som lagrer resultatene for videre bruk, og vi sendes til resultatsiden
             if (tester != null) {
                 HttpSession session = req.getSession();
                 session.setAttribute("logTest", tester);
                 res.sendRedirect("view/resultater.jsp");
+                //Ved eventuelle feil printes en feilmedling
             } else {
-                out.println("user not found");
+                out.println("Fant ikke bruker");
             }
+            //Her håndterer vi eventuelle exeptions
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
