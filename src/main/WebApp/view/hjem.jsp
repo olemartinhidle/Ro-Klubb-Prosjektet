@@ -26,7 +26,7 @@
 <h3>
     Din stilling: <%= bruker.getRettigheter() %> </h3>
 <h3>
-    Ditt passor er: <%= bruker.getPassord() %></h3>
+    Ditt passord er: <%= bruker.getPassord() %></h3>
 
 <br/><br/><br/><br/>
 
