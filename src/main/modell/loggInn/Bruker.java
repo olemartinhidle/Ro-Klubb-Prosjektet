@@ -16,7 +16,7 @@ public class Bruker {
             this.passord = passord;
             this.rettigheter = rettigheter;
         }
-//Har flere slik at vi kan hente ut ulike typer data, for flexibilitet
+//Har flere slik at vi kan hente ut ulike typer data, for fleksibilitet
         public Bruker(String epost, String passord, String rettigheter) {
             this.epost = epost;
             this.passord = passord;

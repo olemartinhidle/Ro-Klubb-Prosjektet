@@ -23,7 +23,7 @@ public class StyrkeTest extends Test {
         this.antallBeveg = antallBeveg;
     }
 
-    //Gett ere henter data, "finner"
+    //Get ere henter data, "finner"
     //Set ere innsetter eller lagrer data
 
     public String getTestID() {     return testID; }

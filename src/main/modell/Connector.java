@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// This class can be used to initialize the database connection
+// Denne klassen kan man bruke til å starte opp databasetilkoblingen
 public class Connector {
     private static Connection con;
 
@@ -13,11 +13,10 @@ public class Connector {
             throws SQLException, ClassNotFoundException
     {
 
-        // Initialize all the information regarding
-        // Database Connection
+        // Finn frem informasjon angående databasetilkoblingen
         String dbDriver = "org.mariadb.jdbc.Driver";
         String dbURL = "jdbc:mariadb://127.0.0.1:3306/RoForbundDB";
-        // Database name to access
+        // Databasenavn for å få tilgang
         String dbName = "@DockerDB";
         String dbUsername = "root";
         String dbPassword = "Ex20200702-IS201";
