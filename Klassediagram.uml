@@ -3,191 +3,193 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="222.82083333333338" y="280.0">main.kontroller.servlets.RegisterWebBruker</node>
-    <node x="790.5208333333334" y="80.0">main.modell.forbund.DistanseTest</node>
-    <node x="941.3208333333334" y="0.0">main.modell.forbund.Test</node>
-    <node x="36.0" y="170.0">main.modell.forbund.MedlemDB</node>
-    <node x="426.8208333333334" y="280.0">main.kontroller.servlets.LoggInn</node>
-    <node x="672.8946428571429" y="80.0">main.modell.forbund.Tester</node>
+    <node x="634.5" y="170.0">main.modell.forbund.ResultaterDB</node>
+    <node x="232.0" y="280.0">main.kontroller.servlets.RegisterWebBruker</node>
+    <node x="1078.910119047619" y="80.0">main.modell.forbund.DistanseTest</node>
+    <node x="586.0934523809524" y="0.0">main.modell.forbund.Test</node>
+    <node x="848.0934523809524" y="170.0">main.modell.forbund.MedlemDB</node>
+    <node x="436.0" y="280.0">main.kontroller.servlets.LoggInn</node>
     <node x="0.0" y="355.0">main.kontroller.servlets.LoggUt</node>
-    <node x="308.85" y="170.0">main.modell.loggInn.BrukerDB</node>
-    <node x="756.3660714285716" y="280.0">main.kontroller.servlets.RegistrerDistanseTest</node>
-    <node x="576.3660714285716" y="280.0">main.kontroller.servlets.HentResultater</node>
-    <node x="1030.5333333333333" y="80.0">main.modell.forbund.StyrkeTest</node>
-    <node x="1095.6160714285716" y="170.0">main.modell.forbund.StyrkeDB</node>
-    <node x="899.3946428571429" y="170.0">main.modell.forbund.DistanseDB</node>
-    <node x="54.02083333333326" y="80.0">main.modell.forbund.Medlem</node>
-    <node x="34.82083333333344" y="280.0">main.kontroller.servlets.RegistrerMedlem</node>
-    <node x="992.3660714285716" y="280.0">main.kontroller.servlets.RegistrerStyrkeTest</node>
-    <node x="315.5660714285715" y="80.0">main.modell.loggInn.Bruker</node>
-    <node x="625.3208333333334" y="170.0">main.modell.forbund.TesterDB</node>
-    <node x="485.3208333333334" y="170.0">main.modell.Connector</node>
+    <node x="321.79047619047606" y="170.0">main.modell.loggInn.BrukerDB</node>
+    <node x="607.2738095238095" y="280.0">main.kontroller.servlets.HentResultater</node>
+    <node x="977.3000000000001" y="280.0">main.kontroller.servlets.RegistrerDistanseTest</node>
+    <node x="43.29345238095232" y="80.0">main.modell.forbund.StyrkeTest</node>
+    <node x="36.0" y="170.0">main.modell.forbund.StyrkeDB</node>
+    <node x="706.4839285714285" y="80.0">main.modell.forbund.Resultater</node>
+    <node x="1016.1500000000001" y="170.0">main.modell.forbund.DistanseDB</node>
+    <node x="857.0434523809523" y="80.0">main.modell.forbund.Medlem</node>
+    <node x="789.3000000000001" y="280.0">main.kontroller.servlets.RegistrerMedlem</node>
+    <node x="12.0" y="280.0">main.kontroller.servlets.RegistrerStyrkeTest</node>
+    <node x="318.4738095238095" y="80.0">main.modell.loggInn.Bruker</node>
+    <node x="494.5" y="170.0">main.modell.Connector</node>
   </nodes>
   <notes />
   <edges>
     <edge source="main.kontroller.servlets.RegistrerMedlem" target="main.modell.forbund.Medlem">
-      <point x="33.59999999999991" y="-15.0" />
-      <point x="152.42083333333335" y="260.0" />
-      <point x="177.2946428571429" y="260.0" />
-      <point x="177.2946428571429" y="150.0" />
-      <point x="134.02083333333326" y="150.0" />
-      <point x="32.0" y="15.0" />
+      <point x="-33.599999999999994" y="-15.0" />
+      <point x="839.7" y="260.0" />
+      <point x="833.5934523809524" y="260.0" />
+      <point x="833.5934523809524" y="150.0" />
+      <point x="873.0434523809523" y="150.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="main.modell.forbund.ResultaterDB" target="main.modell.forbund.Resultater">
+      <point x="-36.0" y="-15.0" />
+      <point x="670.5" y="150.0" />
+      <point x="727.8172619047618" y="150.0" />
+      <point x="-42.666666666666686" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegisterWebBruker" target="main.modell.loggInn.Bruker">
-      <point x="-36.799999999999955" y="-15.0" />
-      <point x="278.0208333333334" y="220.0" />
-      <point x="242.01071428571436" y="220.0" />
-      <point x="242.01071428571436" y="140.0" />
-      <point x="344.36607142857144" y="140.0" />
-      <point x="-19.200000000000045" y="15.0" />
+      <point x="-73.60000000000002" y="-15.0" />
+      <point x="250.39999999999998" y="230.0" />
+      <point x="251.79345238095243" y="230.0" />
+      <point x="251.79345238095243" y="130.0" />
+      <point x="328.07380952380953" y="130.0" />
+      <point x="-38.39999999999998" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegistrerStyrkeTest" target="main.modell.forbund.StyrkeDB">
-      <point x="40.0" y="-15.0" />
-      <point x="1132.3660714285716" y="260.0" />
-      <point x="1123.6160714285716" y="260.0" />
+      <point x="-40.0" y="-15.0" />
+      <point x="72.0" y="260.0" />
+      <point x="64.0" y="260.0" />
       <point x="-28.0" y="15.0" />
-    </edge>
-    <edge source="main.modell.forbund.StyrkeDB" target="main.modell.forbund.StyrkeTest">
-      <point x="0.0" y="-15.0" />
-      <point x="1151.6160714285716" y="150.0" />
-      <point x="1137.2" y="150.0" />
-      <point x="42.66666666666666" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegisterWebBruker" target="main.modell.Connector">
       <point x="73.60000000000002" y="-15.0" />
-      <point x="388.4208333333334" y="250.0" />
-      <point x="515.3208333333334" y="250.0" />
+      <point x="397.6" y="250.0" />
+      <point x="524.5" y="250.0" />
       <point x="-30.0" y="15.0" />
     </edge>
+    <edge source="main.modell.forbund.StyrkeDB" target="main.modell.forbund.StyrkeTest">
+      <point x="0.0" y="-15.0" />
+      <point x="92.0" y="150.0" />
+      <point x="107.29345238095232" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
     <edge source="main.kontroller.servlets.RegistrerDistanseTest" target="main.modell.forbund.DistanseDB">
-      <point x="43.19999999999999" y="-15.0" />
-      <point x="907.5660714285716" y="260.0" />
-      <point x="931.3946428571429" y="260.0" />
+      <point x="-43.200000000000045" y="-15.0" />
+      <point x="1042.1" y="260.0" />
+      <point x="1048.15" y="260.0" />
       <point x="-32.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegistrerMedlem" target="main.modell.Connector">
-      <point x="67.20000000000005" y="-15.0" />
-      <point x="186.02083333333348" y="240.0" />
-      <point x="495.3208333333334" y="240.0" />
-      <point x="-50.0" y="15.0" />
-    </edge>
-    <edge source="main.modell.forbund.StyrkeTest" target="main.modell.forbund.Test">
-      <point x="32.0" y="-15.0" />
-      <point x="1126.5333333333333" y="50.0" />
-      <point x="1011.3208333333334" y="50.0" />
+      <point x="-67.19999999999999" y="-15.0" />
+      <point x="806.1" y="240.0" />
+      <point x="584.5" y="240.0" />
       <point x="30.0" y="15.0" />
     </edge>
-    <edge source="main.modell.forbund.DistanseTest" target="main.modell.forbund.Test">
-      <point x="-36.0" y="-15.0" />
-      <point x="826.5208333333334" y="50.0" />
-      <point x="951.3208333333334" y="50.0" />
+    <edge source="main.modell.forbund.StyrkeTest" target="main.modell.forbund.Test">
+      <point x="-32.0" y="-15.0" />
+      <point x="75.29345238095232" y="50.0" />
+      <point x="596.0934523809524" y="50.0" />
       <point x="-30.0" y="15.0" />
     </edge>
-    <edge source="main.kontroller.servlets.RegistrerStyrkeTest" target="main.modell.Connector">
-      <point x="-80.0" y="-15.0" />
-      <point x="1012.3660714285716" y="240.0" />
-      <point x="595.3208333333334" y="240.0" />
-      <point x="50.0" y="15.0" />
+    <edge source="main.modell.forbund.DistanseTest" target="main.modell.forbund.Test">
+      <point x="36.0" y="-15.0" />
+      <point x="1186.910119047619" y="50.0" />
+      <point x="656.0934523809524" y="50.0" />
+      <point x="30.0" y="15.0" />
     </edge>
-    <edge source="main.modell.forbund.TesterDB" target="main.modell.forbund.Tester">
-      <point x="-27.999999999999943" y="-15.0" />
-      <point x="653.3208333333334" y="150.0" />
-      <point x="688.8946428571429" y="150.0" />
-      <point x="-32.0" y="15.0" />
+    <edge source="main.kontroller.servlets.RegistrerStyrkeTest" target="main.modell.Connector">
+      <point x="80.0" y="-15.0" />
+      <point x="192.0" y="240.0" />
+      <point x="504.5" y="240.0" />
+      <point x="-50.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegistrerStyrkeTest" target="main.modell.forbund.StyrkeTest">
-      <point x="0.0" y="-15.0" />
-      <point x="1092.3660714285716" y="260.0" />
-      <point x="1085.1160714285716" y="260.0" />
-      <point x="1085.1160714285716" y="150.0" />
-      <point x="1094.5333333333333" y="150.0" />
-      <point x="0.0" y="15.0" />
+      <point x="-80.0" y="-15.0" />
+      <point x="32.0" y="260.0" />
+      <point x="25.5" y="260.0" />
+      <point x="25.5" y="150.0" />
+      <point x="64.62678571428569" y="150.0" />
+      <point x="-42.66666666666663" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegistrerDistanseTest" target="main.modell.forbund.DistanseTest">
-      <point x="0.0" y="-15.0" />
-      <point x="864.3660714285716" y="260.0" />
-      <point x="862.5208333333334" y="260.0" />
+      <point x="43.200000000000045" y="-15.0" />
+      <point x="1128.5" y="260.0" />
+      <point x="1154.65" y="260.0" />
+      <point x="1154.65" y="150.0" />
+      <point x="1150.910119047619" y="150.0" />
       <point x="0.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.HentResultater" target="main.modell.Connector">
       <point x="-60.0" y="-15.0" />
-      <point x="596.3660714285716" y="260.0" />
-      <point x="555.3208333333334" y="260.0" />
+      <point x="627.2738095238095" y="260.0" />
+      <point x="564.5" y="260.0" />
       <point x="10.0" y="15.0" />
-    </edge>
-    <edge source="main.kontroller.servlets.HentResultater" target="main.modell.forbund.TesterDB">
-      <point x="-20.0" y="-15.0" />
-      <point x="636.3660714285716" y="260.0" />
-      <point x="653.3208333333334" y="260.0" />
-      <point x="-28.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.LoggInn" target="main.modell.loggInn.BrukerDB">
       <point x="-39.0" y="-15.0" />
-      <point x="439.8208333333334" y="230.0" />
-      <point x="378.85" y="230.0" />
+      <point x="449.0" y="230.0" />
+      <point x="391.79047619047606" y="230.0" />
       <point x="14.0" y="15.0" />
+    </edge>
+    <edge source="main.kontroller.servlets.RegistrerMedlem" target="main.modell.forbund.MedlemDB">
+      <point x="1.4210854715202004E-14" y="-15.0" />
+      <point x="873.3000000000001" y="260.0" />
+      <point x="876.0934523809524" y="260.0" />
+      <point x="-28.0" y="15.0" />
     </edge>
     <edge source="main.modell.forbund.DistanseDB" target="main.modell.forbund.DistanseTest">
       <point x="0.0" y="-15.0" />
-      <point x="963.3946428571429" y="150.0" />
-      <point x="910.5208333333334" y="150.0" />
-      <point x="48.0" y="15.0" />
-    </edge>
-    <edge source="main.kontroller.servlets.RegistrerMedlem" target="main.modell.forbund.MedlemDB">
-      <point x="-33.59999999999991" y="-15.0" />
-      <point x="85.22083333333353" y="260.0" />
-      <point x="64.0" y="260.0" />
-      <point x="-28.0" y="15.0" />
+      <point x="1080.15" y="150.0" />
+      <point x="1102.910119047619" y="150.0" />
+      <point x="-48.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegistrerDistanseTest" target="main.modell.Connector">
       <point x="-86.39999999999998" y="-15.0" />
-      <point x="777.9660714285716" y="250.0" />
-      <point x="575.3208333333334" y="250.0" />
-      <point x="30.0" y="15.0" />
-    </edge>
-    <edge source="main.kontroller.servlets.HentResultater" target="main.modell.forbund.Tester">
-      <point x="60.0" y="-15.0" />
-      <point x="716.3660714285716" y="260.0" />
-      <point x="771.3946428571429" y="260.0" />
-      <point x="771.3946428571429" y="150.0" />
-      <point x="752.8946428571429" y="150.0" />
-      <point x="32.0" y="15.0" />
+      <point x="998.9000000000001" y="230.0" />
+      <point x="604.5" y="230.0" />
+      <point x="50.0" y="15.0" />
     </edge>
     <edge source="main.modell.loggInn.BrukerDB" target="main.modell.loggInn.Bruker">
       <point x="-28.0" y="-15.0" />
-      <point x="336.85" y="150.0" />
-      <point x="363.5660714285715" y="150.0" />
+      <point x="349.79047619047606" y="150.0" />
+      <point x="366.4738095238095" y="150.0" />
       <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="main.kontroller.servlets.LoggInn" target="main.modell.Connector">
-      <point x="39.0" y="-15.0" />
-      <point x="517.8208333333334" y="260.0" />
-      <point x="535.3208333333334" y="260.0" />
-      <point x="-10.0" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.LoggInn" target="main.modell.loggInn.Bruker">
       <point x="13.0" y="-15.0" />
-      <point x="491.8208333333334" y="230.0" />
-      <point x="474.8208333333334" y="230.0" />
-      <point x="474.8208333333334" y="150.0" />
-      <point x="401.96607142857147" y="150.0" />
+      <point x="501.0" y="230.0" />
+      <point x="484.0" y="230.0" />
+      <point x="484.0" y="140.0" />
+      <point x="404.8738095238095" y="140.0" />
       <point x="38.39999999999998" y="15.0" />
+    </edge>
+    <edge source="main.kontroller.servlets.LoggInn" target="main.modell.Connector">
+      <point x="39.0" y="-15.0" />
+      <point x="527.0" y="260.0" />
+      <point x="544.5" y="260.0" />
+      <point x="-10.0" y="15.0" />
+    </edge>
+    <edge source="main.kontroller.servlets.HentResultater" target="main.modell.forbund.ResultaterDB">
+      <point x="-20.0" y="-15.0" />
+      <point x="667.2738095238095" y="260.0" />
+      <point x="670.5" y="260.0" />
+      <point x="-36.0" y="15.0" />
     </edge>
     <edge source="main.modell.forbund.MedlemDB" target="main.modell.forbund.Medlem">
       <point x="0.0" y="-15.0" />
-      <point x="92.0" y="150.0" />
-      <point x="102.02083333333326" y="150.0" />
       <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="main.kontroller.servlets.HentResultater" target="main.modell.forbund.Resultater">
+      <point x="60.0" y="-15.0" />
+      <point x="747.2738095238095" y="260.0" />
+      <point x="822.5934523809524" y="260.0" />
+      <point x="822.5934523809524" y="150.0" />
+      <point x="813.1505952380951" y="150.0" />
+      <point x="42.66666666666663" y="15.0" />
     </edge>
     <edge source="main.kontroller.servlets.RegisterWebBruker" target="main.modell.loggInn.BrukerDB">
       <point x="0.0" y="-15.0" />
-      <point x="314.8208333333334" y="230.0" />
-      <point x="322.85" y="230.0" />
+      <point x="324.0" y="230.0" />
+      <point x="335.79047619047606" y="230.0" />
       <point x="-42.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.2" x="473.2884615384615" y="302.6923076923076" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="472.6666666666667" y="191.99999999999997" />
+  <SelectedNodes>
+    <node>main.modell.forbund.ResultaterDB</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
