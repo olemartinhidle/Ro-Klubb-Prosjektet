@@ -1,6 +1,6 @@
 package main.modell.forbund;
 
-public class Tester {
+public class Resultater {
 
     String dato;
     int født;
@@ -19,10 +19,10 @@ public class Tester {
     int antallBeveg;
 
 
-    public Tester() {
+    public Resultater() {
     }
 
-    public Tester(String dato, int født, String fornavn, String etternavn,
+    public Resultater(String dato, int født, String fornavn, String etternavn,
                   String klubb, int femtusenWatt, String femtusentid,
                   int totusenWatt, String totusenTid, int sekstiWatt,
                   String liggroPro, int liggroKG, String knebøyPro,

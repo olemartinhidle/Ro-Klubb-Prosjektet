@@ -1,8 +1,8 @@
 package main.kontroller.servlets;
 
 import main.modell.Connector;
-import main.modell.forbund.Tester;
-import main.modell.forbund.TesterDB;
+import main.modell.forbund.Resultater;
+import main.modell.forbund.ResultaterDB;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -25,18 +25,18 @@ public class HentResultater extends HttpServlet {
 
 //Lagrer parameteren fra web interfacet i en string variabel
         String    logFornavn = req.getParameter("medlemsID");
-//Oppretter en TesterDB (Modell)
-        TesterDB tdb = null;
+//Oppretter en ResultaterDB (Modell)
+        ResultaterDB rdb = null;
 //Try catch løkke for kvalitetssikringen
         try {
             //Her definerer vi en testDB modell
-            tdb = new TesterDB(Connector.initializeDatabase());
+            rdb = new ResultaterDB(Connector.initializeDatabase());
             //Her oppretter vi en test modell og kombinerer test modellen med TestDB modell
-            Tester tester = tdb.SøkEtterResultater(logFornavn);
+            Resultater resultater = rdb.SøkEtterResultater(logFornavn);
             //Her oppretter vi en sessionb som lagrer resultatene for videre bruk, og vi sendes til resultatsiden
-            if (tester != null) {
+            if (resultater != null) {
                 HttpSession session = req.getSession();
-                session.setAttribute("logTest", tester);
+                session.setAttribute("logTest", resultater);
                 res.sendRedirect("view/resultater.jsp");
                 //Ved eventuelle feil printes en feilmedling
             } else {

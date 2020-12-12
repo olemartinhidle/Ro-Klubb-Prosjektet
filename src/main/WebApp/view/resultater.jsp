@@ -1,7 +1,7 @@
-<%@page import="main.modell.forbund.Tester"%>
+<%@page import="main.modell.forbund.Resultater"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% Tester tester = (Tester) session.getAttribute("logTest");
-    if(tester==null){
+<% Resultater resultater = (Resultater) session.getAttribute("logTest");
+    if(resultater==null){
         response.sendRedirect("hjem.view"); }                           %>
 <!-- Vi utnytter dataene fra test modellen til å finne frem test resultatene, og eventuelt sender bruker tilbake om bruker ikke eksisterer -->
 <!DOCTYPE html>
@@ -19,35 +19,35 @@
 <!-- Under henter vi ut dataene fra objektet -->
 <center><h1>Nyligste resultater</h1></center>
 <h3>
-    Dato: <%= tester.getDato() %></h3>
+    Dato: <%= resultater.getDato() %></h3>
 <h3>
-    Født: <%= tester.getFødt() %> </h3>
+    Født: <%= resultater.getFødt() %> </h3>
 <h3>
-    Fornavn: <%= tester.getFornavn() %> </h3>
+    Fornavn: <%= resultater.getFornavn() %> </h3>
 <h3>
-    Etternavn: <%= tester.getEtternavn() %></h3>
+    Etternavn: <%= resultater.getEtternavn() %></h3>
 <h3>
-    Klubb: <%= tester.getKlubb() %></h3>
+    Klubb: <%= resultater.getKlubb() %></h3>
 <h3>
-    Watt 5000 Meter: <%= tester.getFemtusenWatt() %> </h3>
+    Watt 5000 Meter: <%= resultater.getFemtusenWatt() %> </h3>
 <h3>
-    Tid 5000 Meter: <%= tester.getFemtusentid() %> </h3>
+    Tid 5000 Meter: <%= resultater.getFemtusentid() %> </h3>
 <h3>
-    Watt 2000 Meter: <%= tester.getTotusenWatt() %></h3>
+    Watt 2000 Meter: <%= resultater.getTotusenWatt() %></h3>
 <h3>
-    Tid 2000 Meter, <%= tester.getTotuseniTid() %></h3>
+    Tid 2000 Meter, <%= resultater.getTotuseniTid() %></h3>
 <h3>
-    Watt 60 Meter: <%= tester.getSekstiWatt() %> </h3>
+    Watt 60 Meter: <%= resultater.getSekstiWatt() %> </h3>
 <h3>
-    Ligg i ro prosent: <%= tester.getLiggiroProsent() %> </h3>
+    Ligg i ro prosent: <%= resultater.getLiggiroProsent() %> </h3>
 <h3>
-    Ligg i ro KG: <%= tester.getLiggiroKG() %></h3>
+    Ligg i ro KG: <%= resultater.getLiggiroKG() %></h3>
 <h3>
-    Knebøy i prosent: <%= tester.getKnebøyiProsent() %> </h3>
+    Knebøy i prosent: <%= resultater.getKnebøyiProsent() %> </h3>
 <h3>
-    Knebøy i KG: <%= tester.getKnebøyiKG() %></h3>
+    Knebøy i KG: <%= resultater.getKnebøyiKG() %></h3>
 <h3>
-    Antall beveg: <%= tester.getAntallBeveg() %> </h3>
+    Antall beveg: <%= resultater.getAntallBeveg() %> </h3>
 
 <br/><br/><br/><br/>
 

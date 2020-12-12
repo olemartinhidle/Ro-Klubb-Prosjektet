@@ -5,15 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TesterDB {
+public class ResultaterDB {
     Connection con;
 
-    public TesterDB(Connection con) {
+    public ResultaterDB(Connection con) {
         this.con = con;
     }
 
-    public Tester SøkEtterResultater(String medlemsID) {
-        Tester tester = null;
+    public Resultater SøkEtterResultater(String medlemsID) {
+        Resultater resultater = null;
         PreparedStatement pt = null;
         ResultSet rs = null;
         try {
@@ -48,26 +48,26 @@ public class TesterDB {
             rs = pt.executeQuery();
 
             if (rs.next()) {
-                tester = new Tester();
-                tester.setDato(rs.getString("Dato"));
-                tester.setFødt(rs.getInt("Født"));
-                tester.setFornavn(rs.getString("Fornavn"));
-                tester.setEtternavn(rs.getString("Etternavn"));
-                tester.setKlubb(rs.getString("Klubb"));
-                tester.setFemtusenWatt(rs.getInt("5000Watt"));
-                tester.setFemtusentid(rs.getString("5000Tid"));
-                tester.setTotusenWatt(rs.getInt("2000Watt"));
-                tester.setTotuseniTid(rs.getString("2000Tid"));
-                tester.setSekstiWatt(rs.getInt("60Watt"));
-                tester.setLiggiroProsent(rs.getString("LiggroProsent"));
-                tester.setLiggiroKG(rs.getInt("LiggroKG"));
-                tester.setKnebøyiProsent(rs.getString("KnebøyProsent"));
-                tester.setKnebøyiKG(rs.getInt("KnebøyKG"));
-                tester.setAntallBeveg(rs.getInt("AntallBeveg"));
+                resultater = new Resultater();
+                resultater.setDato(rs.getString("Dato"));
+                resultater.setFødt(rs.getInt("Født"));
+                resultater.setFornavn(rs.getString("Fornavn"));
+                resultater.setEtternavn(rs.getString("Etternavn"));
+                resultater.setKlubb(rs.getString("Klubb"));
+                resultater.setFemtusenWatt(rs.getInt("5000Watt"));
+                resultater.setFemtusentid(rs.getString("5000Tid"));
+                resultater.setTotusenWatt(rs.getInt("2000Watt"));
+                resultater.setTotuseniTid(rs.getString("2000Tid"));
+                resultater.setSekstiWatt(rs.getInt("60Watt"));
+                resultater.setLiggiroProsent(rs.getString("LiggroProsent"));
+                resultater.setLiggiroKG(rs.getInt("LiggroKG"));
+                resultater.setKnebøyiProsent(rs.getString("KnebøyProsent"));
+                resultater.setKnebøyiKG(rs.getInt("KnebøyKG"));
+                resultater.setAntallBeveg(rs.getInt("AntallBeveg"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return tester;
+        return resultater;
     }
 }
